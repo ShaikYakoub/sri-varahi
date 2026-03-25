@@ -9,9 +9,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://valuegold.in"),
   title: "Value Gold - Best Gold Buyers in India | 120+ Years Trust",
-  description: "Sell your gold at the best rates with complete transparency. 120+ years of heritage, instant payment, XRF testing. Branches across Hyderabad, Vijayawada, Visakhapatnam.",
-  keywords: "gold buyers, sell gold, gold rate today, best gold buyers India, Value Gold, CapsGold",
+  description:
+    "Sell your gold at the best rates with complete transparency. 120+ years of heritage, instant payment, XRF testing. Branches across Hyderabad, Vijayawada, Visakhapatnam.",
+  keywords:
+    "gold buyers, sell gold, gold rate today, best gold buyers India, Value Gold, CapsGold",
+  openGraph: {
+    title: "Value Gold - Best Gold Buyers in India",
+    description: "120+ years of trust. Instant payment. XRF testing.",
+    url: "https://valuegold.in",
+    siteName: "Value Gold",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Value Gold - Best Gold Buyers in India",
+    description: "120+ years of trust. Instant payment. XRF testing.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +38,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`scroll-smooth light ${inter.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`scroll-smooth light ${inter.variable}`}
+    >
+      <head>
+        <link rel="icon" href="/logo.avif" type="image/avif" />
+      </head>
       <body className="antialiased font-sans">
         <script
           dangerouslySetInnerHTML={{
@@ -54,5 +79,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-

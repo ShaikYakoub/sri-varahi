@@ -3,12 +3,12 @@
 import { useEffect, useRef } from "react";
 
 const partners = [
-  { id: 1, name: "Partner 1", alt: "Partner Company 1" },
-  { id: 2, name: "Partner 2", alt: "Partner Company 2" },
-  { id: 3, name: "Partner 3", alt: "Partner Company 3" },
-  { id: 4, name: "Partner 4", alt: "Partner Company 4" },
-  { id: 5, name: "Partner 5", alt: "Partner Company 5" },
-  { id: 6, name: "Partner 6", alt: "Partner Company 6" },
+  { id: 1, name: "SBI", fullName: "State Bank of India" },
+  { id: 2, name: "HDFC", fullName: "HDFC Bank" },
+  { id: 3, name: "ICICI", fullName: "ICICI Bank" },
+  { id: 4, name: "Muthoot", fullName: "Muthoot Finance" },
+  { id: 5, name: "Manappuram", fullName: "Manappuram Finance" },
+  { id: 6, name: "Axis", fullName: "Axis Bank" },
 ];
 
 export default function PremiumAutoScroller() {
@@ -45,10 +45,10 @@ export default function PremiumAutoScroller() {
         <div className="relative">
           {/* Left fade */}
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-50 dark:from-black to-transparent z-10 pointer-events-none"></div>
-          
+
           {/* Right fade */}
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-50 dark:from-black to-transparent z-10 pointer-events-none"></div>
-          
+
           <div
             ref={scrollerRef}
             className="flex gap-8 overflow-hidden"
@@ -58,14 +58,13 @@ export default function PremiumAutoScroller() {
             {[...partners, ...partners, ...partners].map((partner, index) => (
               <div
                 key={`${partner.id}-${index}`}
-                className="flex-shrink-0 w-24 h-12 bg-gradient-to-br from-white to-slate-50 dark:from-black dark:to-gray-900 flex items-center justify-center border border-blue-100 dark:border-amber-500/20"
+                className="shrink-0 min-w-32 h-14 px-3 bg-gradient-to-br from-white to-slate-50 dark:from-black dark:to-gray-900 flex items-center justify-center border border-blue-100 dark:border-amber-500/20"
+                title={partner.fullName}
+                aria-label={partner.fullName}
               >
-                <div className="text-center">
-                  <div className="text-lg mb-0.5">🏢</div>
-                  <p className="text-[10px] font-semibold text-gray-700 dark:text-gray-300">
-                    {partner.name}
-                  </p>
-                </div>
+                <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 tracking-wide uppercase">
+                  {partner.name}
+                </p>
               </div>
             ))}
           </div>
@@ -74,5 +73,3 @@ export default function PremiumAutoScroller() {
     </section>
   );
 }
-
-

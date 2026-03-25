@@ -1,13 +1,34 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const slides = [
-  { id: 1, title: "Slide 1", color: "from-primary to-accent" },
-  { id: 2, title: "Slide 2", color: "from-accent to-primary" },
-  { id: 3, title: "Slide 3", color: "from-primary to-secondary" },
-  { id: 4, title: "Slide 4", color: "from-secondary to-accent" },
-  { id: 5, title: "Slide 5", color: "from-accent to-primary" },
+  {
+    id: 1,
+    imageSrc: "/images/slider-jewelry-flatlay.webp",
+    alt: "Gold jewelry collection displayed on velvet",
+  },
+  {
+    id: 2,
+    imageSrc: "/images/slider-xrf-machine.webp",
+    alt: "Close-up of gold quality testing setup",
+  },
+  {
+    id: 3,
+    imageSrc: "/images/slider-gold-coins.webp",
+    alt: "Gold coins and bars arranged on a premium surface",
+  },
+  {
+    id: 4,
+    imageSrc: "/images/slider-gold-scale.webp",
+    alt: "Value Gold branch interior and service counter",
+  },
+  {
+    id: 5,
+    imageSrc: "/images/slider-gold-melting.webp",
+    alt: "Gold valuation with precision weighing equipment",
+  },
 ];
 
 export default function HeroSlider() {
@@ -50,8 +71,8 @@ export default function HeroSlider() {
   };
 
   return (
-    <section 
-      className="no-bottom-radius relative w-full h-[500px] overflow-hidden bg-white dark:bg-black"
+    <section
+      className="no-bottom-radius relative w-full h-125 overflow-hidden bg-white dark:bg-black"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -65,14 +86,15 @@ export default function HeroSlider() {
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div
-              className={`w-full h-full bg-gradient-to-br ${slide.color} flex items-center justify-center`}
-            >
-              <div className="text-center text-primary-foreground">
-                <div className="text-6xl mb-4">🖼️</div>
-                <h2 className="text-4xl font-bold mb-2">{slide.title}</h2>
-                <p className="text-lg opacity-90">[Image Placeholder]</p>
-              </div>
+            <div className="relative w-full h-full">
+              <Image
+                src={slide.imageSrc}
+                alt={slide.alt}
+                fill
+                className="object-cover"
+                priority={index === 0}
+                sizes="100vw"
+              />
             </div>
           </div>
         ))}
@@ -137,5 +159,3 @@ export default function HeroSlider() {
     </section>
   );
 }
-
-

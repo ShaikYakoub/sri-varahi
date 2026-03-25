@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -14,12 +15,12 @@ export default function Navbar() {
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem("theme");
-    
+
     // If no saved theme, default to light mode explicitly
     const isDarkMode = savedTheme === "dark";
-    
+
     setIsDark(isDarkMode);
-    
+
     const html = document.documentElement;
     if (isDarkMode) {
       html.classList.add("dark");
@@ -49,9 +50,9 @@ export default function Navbar() {
   const toggleTheme = () => {
     const html = document.documentElement;
     const newIsDark = !isDark;
-    
+
     setIsDark(newIsDark);
-    
+
     // Force class change immediately
     if (newIsDark) {
       html.classList.remove("light");
@@ -66,7 +67,7 @@ export default function Navbar() {
       html.style.colorScheme = "light";
       localStorage.setItem("theme", "light");
     }
-    
+
     // Force re-render
     document.body.style.transition = "none";
     setTimeout(() => {
@@ -90,22 +91,41 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 dark:from-amber-400 dark:to-amber-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-            VALUE GOLD
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.avif"
+              alt="Value Gold Logo"
+              width={32}
+              height={32}
+              className="mr-2"
+              priority
+            />
+            <span
+              className="text-lg font-bold bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 bg-clip-text text-transparent select-none"
+              style={{ letterSpacing: "1px" }}
+            >
+              Sree Varahi
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {/* Services Dropdown */}
-            <div 
-              className="relative group"
-            >
-              <button
-                className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium flex items-center gap-1"
-              >
+            <div className="relative group">
+              <button className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium flex items-center gap-1">
                 Services
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               <div className="absolute hidden group-hover:block top-full left-0 pt-2 w-56 z-50">
@@ -125,21 +145,21 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            
+
             <Link
               href="/branches"
               className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
             >
               Branches
             </Link>
-            
+
             <Link
               href="/legacy"
               className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
             >
               Our Legacy
             </Link>
-            
+
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -172,7 +192,7 @@ export default function Navbar() {
                 <span className="text-xs">{isDark ? "🌙" : "☀️"}</span>
               </div>
             </button>
-            
+
             {/* Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -215,8 +235,18 @@ export default function Navbar() {
                 className="flex items-center justify-between w-full text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
               >
                 Services
-                <svg className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg
+                  className={`w-4 h-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               {mobileServicesOpen && (
@@ -238,7 +268,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            
+
             <Link
               href="/branches"
               onClick={() => setIsOpen(false)}
@@ -246,7 +276,7 @@ export default function Navbar() {
             >
               Branches
             </Link>
-            
+
             <Link
               href="/legacy"
               onClick={() => setIsOpen(false)}
@@ -260,5 +290,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 export default function GoldRateCard() {
   const [city, setCity] = useState("Hyderabad");
-  const [rate, setRate] = useState(6850);
-  const [lastUpdate, setLastUpdate] = useState(new Date());
+  const [rate, setRate] = useState<number | null>(null);
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
 
   const cities = [
     "Hyderabad",
@@ -64,18 +64,26 @@ export default function GoldRateCard() {
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
             24K Gold (per gram)
           </div>
-          <div className="text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-800 dark:from-yellow-400 dark:to-yellow-600 bg-clip-text text-transparent">
-            ₹{rate.toLocaleString("en-IN")}
-          </div>
+          {rate === null ? (
+            <div className="text-4xl font-extrabold text-gray-400">
+              Loading...
+            </div>
+          ) : (
+            <div className="text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-800 dark:from-yellow-400 dark:to-yellow-600 bg-clip-text text-transparent">
+              ₹{rate.toLocaleString("en-IN")}
+            </div>
+          )}
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-gray-500 dark:text-gray-400" suppressHydrationWarning>
-          Last updated: {lastUpdate.toLocaleTimeString("en-IN")}
+        <div
+          className="text-center text-sm text-gray-500 dark:text-gray-400"
+          suppressHydrationWarning
+        >
+          Last updated:{" "}
+          {lastUpdate ? lastUpdate.toLocaleTimeString("en-IN") : "Loading..."}
         </div>
       </div>
     </section>
   );
 }
-
-
