@@ -9,26 +9,6 @@ import Image from "next/image";
 
 export default function ReleaseGoldPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    city: "",
-    bankName: "",
-    loanAmount: "",
-    goldWeight: "",
-    karats: "",
-    pledgedTicket: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert(
-      "Thank you! We will verify your pledged gold details and contact you shortly.",
-    );
-  };
 
   const scrollToProcess = () => {
     document.getElementById("process")?.scrollIntoView({ behavior: "smooth" });
@@ -52,7 +32,7 @@ export default function ReleaseGoldPage() {
           <div className="relative z-10 text-center text-white px-6 max-w-4xl">
             <div className="text-6xl mb-4">🔓</div>
             <span className="inline-block px-4 py-1.5 bg-white/10 dark:bg-amber-400/20 text-white/90 dark:text-amber-100 text-sm font-medium rounded-full mb-4 border border-white/20 dark:border-amber-400/40">
-              ⭐ <span className="font-semibold">120+</span> Years of Trust
+              ⭐ Trusted Gold Buyers | Instant Payment
             </span>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Release Your Pledged Gold
@@ -82,7 +62,12 @@ export default function ReleaseGoldPage() {
           </div>
         </section>
 
-        <CalculatorSection defaultTab="release" />
+        <CalculatorSection
+          defaultTab="pledged"
+          tabs={[
+            { label: "Pledged Gold Release Calculator", value: "pledged" },
+          ]}
+        />
 
         {/* Split Section - Banks Supported */}
         <section className="py-12 bg-white dark:bg-black">
@@ -157,22 +142,21 @@ export default function ReleaseGoldPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-4">
-              Stuck with a gold loan from a bank or NBFC? Value Gold offers a
-              hassle-free solution to release your pledged gold. We directly pay
-              off your loan amount to the lender and give you the balance value
-              of your gold instantly. No lengthy procedures, no complicated
-              paperwork—just transparency and trust.
+              Stuck with a gold loan from a bank or NBFC?{" "}
+              <span className="text-blue-600 dark:text-amber-500 font-semibold">
+                Sri Varahi Gold Recovery and Buyers
+              </span>{" "}
+              offers a hassle-free way to release your pledged gold. We settle
+              your outstanding loan directly with the lender and pay you the
+              remaining value of your gold instantly—no lengthy procedures or
+              complicated paperwork.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed">
-              With over{" "}
-              <span className="font-semibold text-blue-600 dark:text-amber-400">
-                120 years
-              </span>{" "}
-              of experience and cutting-edge XRF technology, we ensure fair
-              valuation and complete transparency at every step. Our rates are
-              linked to live market prices, and we handle all communications
-              with your bank or NBFC. Say goodbye to high interest rates and
-              unlock the full value of your gold today.
+              As a modern, independent company, we use advanced XRF technology
+              for accurate, transparent valuation. Our rates are always linked
+              to live market prices, and we coordinate directly with your bank
+              or NBFC for a smooth, stress-free experience. Say goodbye to high
+              interest rates and unlock the full value of your gold today.
             </p>
           </div>
         </section>
@@ -574,194 +558,6 @@ export default function ReleaseGoldPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Form Section */}
-        <section id="form" className="py-10 bg-slate-50 dark:bg-black">
-          <div className="max-w-2xl mx-auto px-6">
-            <span className="block text-center mb-4">
-              <span className="inline-block px-4 py-1.5 bg-blue-100 dark:bg-amber-500/20 text-blue-700 dark:text-amber-400 text-sm font-semibold rounded-full">
-                📝 Quick Form
-              </span>
-            </span>
-            <h2 className="text-4xl font-bold text-center mb-8 text-foreground dark:text-foreground">
-              Ready to Release?{" "}
-              <span className="text-blue-600 dark:text-amber-500">
-                Fill the Form
-              </span>
-            </h2>
-            <form
-              onSubmit={handleSubmit}
-              className="bg-card dark:bg-card rounded-2xl p-8 border border-blue-200 dark:border-amber-500/30 shadow-lg space-y-6"
-            >
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                  City *
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={formData.city}
-                  onChange={(e) =>
-                    setFormData({ ...formData, city: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Bank/NBFC Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.bankName}
-                    onChange={(e) =>
-                      setFormData({ ...formData, bankName: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                    placeholder="e.g., ICICI Bank, Muthoot Finance"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Outstanding Loan Amount (₹) *
-                  </label>
-                  <input
-                    type="number"
-                    required
-                    value={formData.loanAmount}
-                    onChange={(e) =>
-                      setFormData({ ...formData, loanAmount: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Pledged Gold Weight
-                  </label>
-                  <input
-                    type="number"
-                    value={formData.goldWeight}
-                    onChange={(e) =>
-                      setFormData({ ...formData, goldWeight: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Karats (if known)
-                  </label>
-                  <select
-                    value={formData.karats}
-                    onChange={(e) =>
-                      setFormData({ ...formData, karats: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  >
-                    <option value="">Select karats</option>
-                    <option value="24k">24K (99.9% pure)</option>
-                    <option value="22k">22K (91.6% pure)</option>
-                    <option value="18k">18K (75% pure)</option>
-                    <option value="14k">14K (58.3% pure)</option>
-                    <option value="unknown">Not Sure</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Pledged Ticket Number *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.pledgedTicket}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        pledgedTicket: e.target.value,
-                      })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                    placeholder="Found on your loan receipt"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                  Additional Message
-                </label>
-                <textarea
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  placeholder="Any special requests or questions?"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-4 bg-blue-600 hover:bg-blue-700 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-gray-900 font-bold rounded-lg shadow-lg transition-all text-lg"
-              >
-                Submit Request
-              </button>
-            </form>
           </div>
         </section>
       </main>

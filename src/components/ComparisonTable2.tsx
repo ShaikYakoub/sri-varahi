@@ -31,9 +31,9 @@ export default function ComparisonTable() {
       others: "Opaque procedures",
     },
     {
-      feature: "Legacy",
-      valueGold: "120+ years heritage",
-      others: "Limited experience",
+      feature: "Trust",
+      valueGold: "Licensed & transparent",
+      others: "Unlicensed or less transparent",
     },
   ];
 
@@ -41,10 +41,16 @@ export default function ComparisonTable() {
     <section id="comparison" className="py-12 bg-slate-50 dark:bg-black">
       <div className="max-w-4xl mx-auto px-6">
         <span className="block text-center mb-4">
-          <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full">Compare & Decide</span>
+          <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full">
+            Compare & Decide
+          </span>
         </span>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground dark:text-foreground">
-          Why <span className="text-blue-600 dark:text-amber-500">Value Gold</span> Over Others
+          Why{" "}
+          <span className="text-blue-600 dark:text-amber-500">
+            Varahi Gold Recovery
+          </span>{" "}
+          Over Others
         </h2>
         <p className="text-center text-gray-600 dark:text-gray-300 font-light mb-12">
           See the difference for yourself
@@ -59,7 +65,7 @@ export default function ComparisonTable() {
                     Feature
                   </th>
                   <th className="px-6 py-4 text-left text-blue-700 dark:text-amber-300 font-semibold">
-                    Value Gold
+                    Varahi Gold Recovery
                   </th>
                   <th className="px-6 py-4 text-left text-blue-700 dark:text-amber-300 font-semibold">
                     Other Buyers
@@ -101,5 +107,3 @@ export default function ComparisonTable() {
     </section>
   );
 }
-
-

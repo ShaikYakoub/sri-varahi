@@ -13,38 +13,36 @@ export default function OurLegacy() {
           priority
           quality={85}
         />
-        <div className="absolute inset-0 bg-linear-to-br from-blue-700/80 to-blue-900/80 dark:from-black/70 dark:to-black/85" />
-        <div className="max-w-7xl mx-auto px-6 w-full">
+        <div className="absolute inset-0 bg-black/55 dark:bg-black/70" />
+        <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
           <div className="text-center text-white mb-8">
             <span className="inline-block px-4 py-1.5 bg-white/10 dark:bg-amber-400/20 text-white/90 dark:text-amber-100 text-sm font-medium rounded-full mb-4 border border-white/20 dark:border-amber-400/40">
-              🏆 Since 1901
+              ⭐ Modern Gold Experts
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              🏛️ Our Heritage
+              🏛️ Our Legacy of Trust
             </h2>
             <p className="text-xl text-white/70 font-light">
-              A heritage of trust spanning over a century
+              Built on transparency, technology, and customer-first values
             </p>
           </div>
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-amber-400/30">
-              <div>
-                <p className="text-base md:text-lg text-white/85 leading-relaxed font-light">
-                  Established in 1901, Caps Gold built a proud legacy as one of
-                  India&apos;s trusted gold and bullion merchants. Continuing
-                  this heritage, Value Gold delivers modern financial solutions
-                  while preserving the same principles of trust, transparency,
-                  and customer-first service.
-                </p>
-              </div>
-              <div className="relative h-72 md:h-80 rounded-xl overflow-hidden border border-white/20">
-                <Image
-                  src="/images/split-heritage-vintage.webp"
-                  alt="Vintage weighing instruments and heritage-era financial desk"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <div className="flex flex-col items-center justify-center mt-8 gap-6">
+            <h3 className="text-2xl md:text-3xl font-semibold text-white mb-2">
+              Experience Gold Selling, The Modern Way
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/sell-gold"
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-amber-500 dark:hover:bg-amber-400 text-white font-bold rounded-lg shadow-lg transition-all border-2 border-blue-500 dark:border-amber-400"
+              >
+                Sell Gold Now
+              </a>
+              <a
+                href="/release-gold"
+                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg border-2 border-white/70 hover:border-white transition-all flex items-center justify-center gap-2"
+              >
+                Release Pledged Gold
+              </a>
             </div>
           </div>
         </div>
@@ -154,63 +152,6 @@ export default function OurLegacy() {
         </div>
       </section>
 
-      {/* Timeline Strip */}
-      <section className="py-8 bg-white dark:bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <span className="block text-center mb-4">
-            <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full">
-              Our Journey
-            </span>
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-            Milestones Across a Century
-          </h2>
-          <div className="flex gap-4 overflow-x-auto pb-2">
-            {[
-              {
-                image: "/images/timeline-1901.webp",
-                year: "1901",
-                label: "Founded",
-              },
-              {
-                image: "/images/timeline-1950.webp",
-                year: "1950s",
-                label: "Growth",
-              },
-              {
-                image: "/images/timeline-1980.webp",
-                year: "1980s",
-                label: "Expansion",
-              },
-              {
-                image: "/images/timeline-2010.webp",
-                year: "2010",
-                label: "Technology",
-              },
-              {
-                image: "/images/timeline-2024.webp",
-                year: "Today",
-                label: "Value Gold",
-              },
-            ].map((item) => (
-              <div key={item.year} className="shrink-0 w-64">
-                <div className="relative h-44 rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20">
-                  <Image
-                    src={item.image}
-                    alt={`${item.year} timeline milestone`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="mt-2 text-sm font-semibold text-blue-600 dark:text-amber-400">
-                  {item.year} — {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Management Section */}
       <section className="py-8 bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-6">
@@ -229,28 +170,16 @@ export default function OurLegacy() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                name: "Mr. Chanda Abhishek",
+                name: "Mr. John Doe",
                 title: "Managing Director",
                 image: "👤",
-                bio: "Inspired by a rich family legacy, Mr. Abhishek Chanda, son of Chanda Sreenivas Rao, joined the business in 2011, bringing in Change Management and pioneering technological advancements to align with the evolving market. His leadership was instrumental in expanding the bullion business to Karnataka and Tamil Nadu, reinforcing Caps Gold's presence in South India.",
+                bio: "some inspiring bio about the managing director and his vision for the company",
               },
               {
-                name: "Mr. Chanda Akhil",
-                title: "Director",
+                name: "Mr. John Doe",
+                title: "Managing Director",
                 image: "👤",
-                bio: "Being motivated by the footsteps of his forefathers, Chanda Akhil, son of Chanda Venkatesh, joined Caps Gold in 2020. Under his leadership, Caps Gold is undergoing major transformations to become more user-friendly and accessible to a larger audience. He has been instrumental in expanding Bullion Delivery branches in Vizag, Mumbai, and Abids.",
-              },
-              {
-                name: "Mrs. Sowmya Chanda",
-                title: "Director",
-                image: "👤",
-                bio: "Sowmya Chanda, Director of Value Gold Private Limited and Vasavi Group, is a dynamic leader recognized for her vision, innovation, and transformative leadership. As the eldest daughter of Yerram Vijay Kumar, Chairman of the prestigious Vasavi Group, she upholds a strong legacy built on values of diligence, integrity, and compassion.",
-              },
-              {
-                name: "Mrs. Ashika Chanda",
-                title: "Director",
-                image: "👤",
-                bio: "Ashika Chanda, Director of Value Gold Private Limited, leads the company's digital marketing and brand-building initiatives. She plays a key role in shaping Value Gold's online presence, driving innovative strategies that connect with customers, build trust, and position the brand as a leader in the gold-buying sector.",
+                bio: "some inspiring bio about the managing director and his vision for the company",
               },
             ].map((person, index) => (
               <div
@@ -338,7 +267,7 @@ export default function OurLegacy() {
         </div>
       </section>
 
-      {/* Awards Section */}
+      {/* Awards Section
       <section className="relative overflow-hidden py-8 bg-gray-50 dark:bg-black">
         <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none">
           <Image
@@ -365,10 +294,10 @@ export default function OurLegacy() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { year: "2025", name: "Big Impact Awards" },
-              { year: "2025", name: "Successpreneur Awards" },
-              { year: "2025", name: "Radio City Icon Awards" },
-              { year: "2023", name: "Times Business Awards" },
+              { year: "2000", name: "award" },
+              { year: "2025", name: "Success Awards" },
+              { year: "2000", name: "Icon Awards" },
+              { year: "2000", name: "Business Awards" },
             ].map((award, index) => (
               <div
                 key={index}
@@ -385,7 +314,7 @@ export default function OurLegacy() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

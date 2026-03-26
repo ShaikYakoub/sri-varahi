@@ -10,9 +10,9 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <Image
                 src="/logo.avif"
-                alt="Value Gold Logo"
-                width={32}
-                height={32}
+                alt="Sri Varahi Logo"
+                width={48}
+                height={48}
                 className="mr-2"
                 priority
               />
@@ -20,16 +20,31 @@ export default function Footer() {
                 className="text-lg font-bold bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 bg-clip-text text-transparent select-none"
                 style={{ letterSpacing: "1px" }}
               >
-                Sree Varahi
+                Sri Varahi
               </span>
             </div>
             <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 font-light">
-              India&apos;s most trusted gold buyers with{" "}
+              India&apos;s Redefining{" "}
               <span className="font-semibold text-blue-600 dark:text-amber-400">
-                120+
+                trust
+              </span>
+              ,{" "}
+              <span className="font-semibold text-blue-600 dark:text-amber-400">
+                transparency
+              </span>
+              , and value for a new{" "}
+              <span className="font-semibold text-blue-600 dark:text-amber-400">
+                value
               </span>{" "}
-              years of heritage. Transparent pricing, instant payment, and XRF
-              testing.
+              for a new{" "}
+              <span className="font-semibold text-blue-600 dark:text-amber-400">
+                generation
+              </span>{" "}
+              of gold{" "}
+              <span className="font-semibold text-blue-600 dark:text-amber-400">
+                Gold
+              </span>{" "}
+              owners
             </p>
           </div>
 
@@ -123,25 +138,20 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="tel:+919477894778"
+                  href="tel:+9162626 67272"
                   className="hover:text-blue-600 dark:hover:text-amber-400 transition-colors"
                 >
-                  +91 94778 94778
+                  +91 62626 67272
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+914040129999"
-                  className="hover:text-blue-600 dark:hover:text-amber-400 transition-colors"
-                >
-                  +91 40 4012 9999
-                </a>
-              </li>
+              <li></li>
               <li className="pt-2">
                 <div className="text-xs text-gray-600 dark:text-gray-300">
-                  Banjara Hills, Hyderabad
+                  1st floor, 8-3-33 Mydukur - Badvel Rd
                   <br />
-                  Telangana - 500073
+                  Beside HDFC BANK, Badvel
+                  <br />
+                  Andhra Pradesh - 516233
                 </div>
               </li>
             </ul>
@@ -152,7 +162,15 @@ export default function Footer() {
         <div className="border-t border-blue-100/50 dark:border-amber-500/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p>© 2026 Value Gold. All rights reserved.</p>
           <p className="text-gray-600 dark:text-gray-300">
-            A CapsGold Pvt. Ltd. Company
+            A Website by{" "}
+            <a
+              href="https://www.mavericktechnovations.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-amber-400 transition-colors"
+            >
+              Maverick Technovations
+            </a>
           </p>
         </div>
       </div>

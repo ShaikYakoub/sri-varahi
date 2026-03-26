@@ -4,27 +4,12 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer2 from "@/components/Footer2";
 import FloatingActions2 from "@/components/FloatingActions2";
-import CalculatorSection from "@/components/CalculatorSection";
+import GoldRateCard from "@/components/GoldRateCard";
+import GoldCalculator from "@/components/GoldCalculator";
 import Image from "next/image";
 
 export default function SellGoldPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    city: "",
-    goldType: "jewelry",
-    karats: "",
-    estimatedWeight: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you! We will contact you shortly.");
-  };
 
   const scrollToProcess = () => {
     document.getElementById("process")?.scrollIntoView({ behavior: "smooth" });
@@ -48,7 +33,7 @@ export default function SellGoldPage() {
           <div className="relative z-10 text-center text-white px-6 max-w-4xl">
             <div className="text-6xl mb-4">💰</div>
             <span className="inline-block px-4 py-1.5 bg-white/10 dark:bg-amber-400/20 text-white/90 dark:text-amber-200 text-sm font-medium rounded-full mb-4 border border-white/20 dark:border-amber-400/40">
-              ⭐ 120+ Years of Trust & Excellence
+              ⭐ Trusted Gold Buyers | Instant Payment
             </span>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Sell Your Gold Today
@@ -77,7 +62,12 @@ export default function SellGoldPage() {
           </div>
         </section>
 
-        <CalculatorSection defaultTab="sell" />
+        <section id="calculators" className="py-10 bg-white dark:bg-black">
+          <div className="max-w-6xl mx-auto px-6">
+            <GoldRateCard />
+            <GoldCalculator />
+          </div>
+        </section>
 
         {/* Split Section - What We Accept */}
         <section className="py-12 bg-white dark:bg-black">
@@ -151,18 +141,31 @@ export default function SellGoldPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-4">
-              For over 120 years, Value Gold has been the most trusted name in
-              gold buying across India. As a proud subsidiary of CapsGold, we
-              combine our rich heritage with cutting-edge technology to provide
-              you with the most transparent, fair, and efficient gold selling
-              experience.
+              At{" "}
+              <span className="text-blue-600 dark:text-amber-500 font-semibold">
+                Varahi Gold Recovery and Buyers
+              </span>
+              , we are redefining the gold selling experience for a new
+              generation. As a modern, independent company, our mission is to
+              make selling your gold{" "}
+              <span className="text-blue-600 dark:text-amber-500 font-semibold">
+                simple, transparent,
+              </span>{" "}
+              and rewarding—every step of the way.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed">
               We use advanced XRF (X-Ray Fluorescence) technology to test your
-              gold&apos;s purity with scientific precision—right in front of
-              your eyes. Our rates are linked to live international gold prices,
-              ensuring you always get the best value. Plus, with instant bank
-              transfers, your money reaches you within minutes, not days.
+              gold’s purity with{" "}
+              <span className="text-blue-600 dark:text-amber-500 font-semibold">
+                scientific accuracy
+              </span>
+              , right in front of you. Our rates are always linked to{" "}
+              <span className="text-blue-600 dark:text-amber-500 font-semibold">
+                live international gold prices
+              </span>
+              , so you receive the best possible value. With instant bank
+              transfers, your payment is processed within minutes—no waiting, no
+              hassle.
             </p>
           </div>
         </section>
@@ -474,166 +477,6 @@ export default function SellGoldPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Form Section */}
-        <section id="form" className="py-10 bg-white dark:bg-black">
-          <div className="max-w-2xl mx-auto px-6">
-            <span className="block text-center mb-4">
-              <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full">
-                📝 Quick Form
-              </span>
-            </span>
-            <h2 className="text-4xl font-bold text-center mb-8 text-foreground dark:text-foreground">
-              Ready to Sell?{" "}
-              <span className="text-blue-600 dark:text-amber-500">
-                Fill the Form
-              </span>
-            </h2>
-            <form
-              onSubmit={handleSubmit}
-              className="bg-card dark:bg-card rounded-2xl p-8 border border-blue-100/50 dark:border-amber-500/20 shadow-sm space-y-6"
-            >
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                  City *
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={formData.city}
-                  onChange={(e) =>
-                    setFormData({ ...formData, city: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Gold Type *
-                  </label>
-                  <select
-                    required
-                    value={formData.goldType}
-                    onChange={(e) =>
-                      setFormData({ ...formData, goldType: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  >
-                    <option value="jewelry">Jewelry</option>
-                    <option value="coins">Coins</option>
-                    <option value="bars">Bars</option>
-                    <option value="scrap">Scrap/Broken</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                    Karats *
-                  </label>
-                  <select
-                    required
-                    value={formData.karats}
-                    onChange={(e) =>
-                      setFormData({ ...formData, karats: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  >
-                    <option value="">Select Karats</option>
-                    <option value="24">24K</option>
-                    <option value="22">22K</option>
-                    <option value="18">18K</option>
-                    <option value="14">14K</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                  Estimated Weight (grams)
-                </label>
-                <input
-                  type="number"
-                  value={formData.estimatedWeight}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      estimatedWeight: e.target.value,
-                    })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-foreground dark:text-foreground">
-                  Additional Message
-                </label>
-                <textarea
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                  placeholder="Any special requests or questions?"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-4 bg-blue-600 hover:bg-blue-700 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-gray-900 font-bold rounded-lg shadow-lg transition-all text-lg"
-              >
-                Submit Request
-              </button>
-            </form>
           </div>
         </section>
       </main>

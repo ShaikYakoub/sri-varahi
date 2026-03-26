@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://valuegold.in"),
   title: "Value Gold - Best Gold Buyers in India | 120+ Years Trust",
   description:
-    "Sell your gold at the best rates with complete transparency. 120+ years of heritage, instant payment, XRF testing. Branches across Hyderabad, Vijayawada, Visakhapatnam.",
+    "Sell your gold at the best rates with complete transparency. 120+ years of heritage, instant payment, XRF testing. 3 branches across Andhra Pradesh and more coming soon.",
   keywords:
     "gold buyers, sell gold, gold rate today, best gold buyers India, Value Gold, CapsGold",
   openGraph: {

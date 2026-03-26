@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import CustomDropdown from "@/components/CustomDropdown";
 
 export default function GoldCalculator() {
   const [purity, setPurity] = useState(24);
@@ -30,46 +31,35 @@ export default function GoldCalculator() {
 
         <div className="bg-yellow-50 dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-blue-200 dark:border-amber-500/30">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            {/* Purity Select */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                Gold Purity
-              </label>
-              <select
-                value={purity}
-                onChange={(e) => setPurity(Number(e.target.value))}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium focus:ring-2 focus:ring-blue-500 dark:focus:ring-yellow-500 focus:border-transparent outline-none"
-              >
-                <option value={24}>24K</option>
-                <option value={22}>22K</option>
-                <option value={18}>18K</option>
-                <option value={14}>14K</option>
-              </select>
-            </div>
+            {/* Purity Custom Dropdown */}
+            <CustomDropdown
+              label="Gold Purity"
+              value={purity}
+              onChange={(v) => setPurity(Number(v))}
+              options={[
+                { value: 24, label: "24K" },
+                { value: 22, label: "22K" },
+                { value: 18, label: "18K" },
+                { value: 14, label: "14K" },
+              ]}
+            />
 
-            {/* Weight Input */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                Weight (grams)
-              </label>
-              <input
-                type="number"
-                min={1}
-                max={100000}
-                value={weight}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (val === '' || val === '0') {
-                    setWeight(1);
-                  } else {
-                    setWeight(Number(val));
-                  }
-                }}
-                onFocus={(e) => e.target.select()}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium focus:ring-2 focus:ring-blue-500 dark:focus:ring-yellow-500 focus:border-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                placeholder="Enter weight"
-              />
-            </div>
+            {/* Weight Custom Dropdown */}
+            <CustomDropdown
+              label="Weight (grams)"
+              value={weight}
+              onChange={(v) => setWeight(Number(v))}
+              options={[
+                { value: 1, label: "1g" },
+                { value: 5, label: "5g" },
+                { value: 10, label: "10g" },
+                { value: 20, label: "20g" },
+                { value: 50, label: "50g" },
+                { value: 100, label: "100g" },
+                { value: 500, label: "500g" },
+                { value: 1000, label: "1000g" },
+              ]}
+            />
           </div>
 
           {/* Result */}
@@ -78,7 +68,7 @@ export default function GoldCalculator() {
               <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                 Estimated Value
               </div>
-              <div className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-800 dark:from-yellow-400 dark:to-yellow-600 bg-clip-text text-transparent">
+              <div className="text-5xl font-extrabold bg-linear-to-r from-blue-600 to-blue-800 dark:from-yellow-400 dark:to-yellow-600 bg-clip-text text-transparent">
                 ₹{estimatedValue.toLocaleString("en-IN")}
               </div>
             </div>
@@ -94,5 +84,3 @@ export default function GoldCalculator() {
     </section>
   );
 }
-
-

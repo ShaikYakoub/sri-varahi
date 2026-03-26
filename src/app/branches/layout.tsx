@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Branch Locator - Value Gold | 19+ Locations in AP & Telangana",
+  title: "Branch Locator - Sree Varahi Gold | 3 Locations in Andhra Pradesh",
   description:
-    "Find Value Gold branches near you across Hyderabad, Vijayawada, Visakhapatnam, and more. XRF testing and instant payment at every location.",
+    "Find Sree Varahi Gold branches in Andhra Pradesh: Badvel, Markapur, and Narasaraopet. XRF testing and instant payment at every location.",
 };
 
 export default function BranchesLayout({

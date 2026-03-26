@@ -1,3 +1,22 @@
+/* Modern minimal scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2563eb; /* Blue for light mode */
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #f59e0b; /* Gold for dark mode */
+}
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -119,7 +138,8 @@
   }
 
   /* Secondary Text - Smaller, Lighter */
-  small, .text-secondary {
+  small,
+  .text-secondary {
     font-size: 0.875rem;
     line-height: 1.5;
   }
@@ -136,12 +156,15 @@
 
 /* Blinking animation for live indicator */
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
 
 .animate-blink {
   animation: blink 1.5s ease-in-out infinite;
 }
-
-

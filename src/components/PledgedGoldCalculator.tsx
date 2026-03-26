@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import CustomDropdown from "@/components/CustomDropdown";
 
 export default function PledgedGoldCalculator() {
   const [institute, setInstitute] = useState("SBI");
@@ -76,7 +77,7 @@ export default function PledgedGoldCalculator() {
     setResult({
       type: "success",
       message: `You can receive approximately ₹${releaseValue.toLocaleString(
-        "en-IN"
+        "en-IN",
       )} after loan repayment`,
       value: Math.round(releaseValue),
     });
@@ -129,28 +130,34 @@ export default function PledgedGoldCalculator() {
               </div>
             )}
 
-            {/* Gold Weight */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                Gold Weight (grams)
-              </label>
-              <input
-                type="number"
-                min={1}
-                max={100000}
-                value={weight}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (val === '' || val === '0') {
-                    setWeight(1);
-                  } else {
-                    setWeight(Number(val));
-                  }
-                }}
-                onFocus={(e) => e.target.select()}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium focus:ring-2 focus:ring-blue-500 dark:focus:ring-yellow-500 focus:border-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-              />
-            </div>
+            {/* Gold Weight Custom Dropdown */}
+            <CustomDropdown
+              label="Gold Weight (grams)"
+              value={weight}
+              onChange={(v) => setWeight(Number(v))}
+              options={[
+                { value: 1, label: "1g" },
+                { value: 5, label: "5g" },
+                { value: 10, label: "10g" },
+                { value: 20, label: "20g" },
+                { value: 50, label: "50g" },
+                { value: 100, label: "100g" },
+                { value: 500, label: "500g" },
+                { value: 1000, label: "1000g" },
+              ]}
+            />
+            {/* Purity Custom Dropdown */}
+            <CustomDropdown
+              label="Gold Purity"
+              value={purity}
+              onChange={(v) => setPurity(Number(v))}
+              options={[
+                { value: 24, label: "24K" },
+                { value: 22, label: "22K" },
+                { value: 18, label: "18K" },
+                { value: 14, label: "14K" },
+              ]}
+            />
 
             {/* Loan Amount */}
             <div>
@@ -199,8 +206,8 @@ export default function PledgedGoldCalculator() {
                 result.type === "error"
                   ? "bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"
                   : result.type === "no-release"
-                  ? "bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800"
-                  : "bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800"
+                    ? "bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800"
+                    : "bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800"
               }`}
             >
               <p
@@ -208,8 +215,8 @@ export default function PledgedGoldCalculator() {
                   result.type === "error"
                     ? "text-red-700 dark:text-red-300"
                     : result.type === "no-release"
-                    ? "text-orange-700 dark:text-orange-300"
-                    : "text-green-700 dark:text-green-300"
+                      ? "text-orange-700 dark:text-orange-300"
+                      : "text-green-700 dark:text-green-300"
                 }`}
               >
                 {result.message}
@@ -221,5 +228,3 @@ export default function PledgedGoldCalculator() {
     </section>
   );
 }
-
-

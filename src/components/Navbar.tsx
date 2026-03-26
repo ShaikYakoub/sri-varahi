@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  // Removed: mobileServicesOpen state (no longer needed)
 
   // Initialize theme from localStorage or default to light
   useEffect(() => {
@@ -88,63 +88,46 @@ export default function Navbar() {
           : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-3 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.avif"
-              alt="Value Gold Logo"
-              width={32}
-              height={32}
+              alt="Sri Varahi Logo"
+              width={48}
+              height={48}
               className="mr-2"
               priority
             />
             <span
-              className="text-lg font-bold bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 bg-clip-text text-transparent select-none"
+              className="text-lg font-bold bg-linear-to-r from-yellow-400 via-yellow-600 to-yellow-400 bg-clip-text text-transparent select-none"
               style={{ letterSpacing: "1px" }}
             >
-              Sree Varahi
+              Sri Varahi
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium flex items-center gap-1">
-                Services
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              <div className="absolute hidden group-hover:block top-full left-0 pt-2 w-56 z-50">
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2">
-                  <Link
-                    href="/sell-gold"
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                  >
-                    Sell Gold
-                  </Link>
-                  <Link
-                    href="/release-gold"
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                  >
-                    Release Pledged Gold
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <Link
+              href="/"
+              className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
+            >
+              Home
+            </Link>
+            <Link
+              href="/sell-gold"
+              className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
+            >
+              Sell Gold
+            </Link>
+            <Link
+              href="/release-gold"
+              className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
+            >
+              Release Pledged Gold
+            </Link>
 
             <Link
               href="/branches"
@@ -157,7 +140,7 @@ export default function Navbar() {
               href="/legacy"
               className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
             >
-              Our Legacy
+              About Us
             </Link>
 
             {/* Theme Toggle */}
@@ -228,46 +211,20 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3 border-t border-blue-200 dark:border-amber-500/30 pt-4">
-            {/* Services Dropdown */}
-            <div>
-              <button
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="flex items-center justify-between w-full text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
-              >
-                Services
-                <svg
-                  className={`w-4 h-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {mobileServicesOpen && (
-                <div className="ml-4 mt-2 space-y-2">
-                  <Link
-                    href="/sell-gold"
-                    onClick={() => setIsOpen(false)}
-                    className="block text-secondary-foreground dark:text-secondary-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors"
-                  >
-                    Sell Gold
-                  </Link>
-                  <Link
-                    href="/release-gold"
-                    onClick={() => setIsOpen(false)}
-                    className="block text-secondary-foreground dark:text-secondary-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors"
-                  >
-                    Release Pledged Gold
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link
+              href="/sell-gold"
+              onClick={() => setIsOpen(false)}
+              className="block text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
+            >
+              Sell Gold
+            </Link>
+            <Link
+              href="/release-gold"
+              onClick={() => setIsOpen(false)}
+              className="block text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
+            >
+              Release Pledged Gold
+            </Link>
 
             <Link
               href="/branches"

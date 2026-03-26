@@ -9,46 +9,41 @@ export default function LegacyOverview() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
-            🏆 Since 1901
+            ✨ A New Era Begins
           </span>
           <h2 className="text-4xl font-bold mb-4 text-foreground dark:text-foreground">
-            Our{" "}
-            <span className="text-blue-600 dark:text-amber-500">Legacy</span>
+            Our <span className="text-blue-600 dark:text-amber-500">Story</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Over{" "}
-            <span className="font-semibold text-blue-600 dark:text-amber-400">
-              120 years
-            </span>{" "}
-            of trust and excellence
+            Redefining trust, transparency, and value for a new generation of
+            gold owners
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-12">
-          {/* Heritage */}
+          {/* Our Spark */}
           <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black p-8 rounded-2xl border border-blue-100/50 dark:border-amber-500/20">
-            <div className="text-4xl mb-4">🏛️</div>
+            <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
-              Rich Heritage
+              The Spark That Drives Us
             </h3>
             <p className="text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-4">
-              Founded in 1901, Value Gold is a proud subsidiary of CapsGold, one
-              of India&apos;s most respected names in the gold industry. For
-              over 120 years, we have been serving generations of families with
-              integrity and trust.
+              Born from a passion to make gold selling simple, honest, and
+              empowering, we are here to set a new standard for how value is
+              unlocked and trust is built.
             </p>
           </div>
 
           {/* Values */}
           <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black p-8 rounded-2xl border border-blue-100/50 dark:border-amber-500/20">
-            <div className="text-4xl mb-4">💎</div>
+            <div className="text-4xl mb-4">🌱</div>
             <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
-              Core Values
+              What We Stand For
             </h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              Transparency, integrity, and customer-first approach form the
-              foundation of everything we do. We believe in fair pricing, honest
-              dealings, and building lasting relationships with our customers.
+              We believe in radical transparency, fair value for every customer,
+              and a relentless focus on making your experience seamless and
+              stress-free. Every interaction is built on respect and clarity.
             </p>
           </div>
         </div>
@@ -68,9 +63,9 @@ export default function LegacyOverview() {
                 Our Vision
               </h3>
               <p className="leading-relaxed text-gray-600 dark:text-gray-300">
-                To empower every Indian family to unlock the value of their gold
-                assets with dignity and ease, while expanding our reach across
-                India and excelling in service quality.
+                To become the most trusted and innovative gold partner in Andhra
+                Pradesh, making every transaction effortless, transparent, and
+                rewarding for all.
               </p>
             </div>
             <div>
@@ -78,9 +73,9 @@ export default function LegacyOverview() {
                 Our Mission
               </h3>
               <p className="leading-relaxed text-gray-600 dark:text-gray-300">
-                Driven by integrity, innovation, and unwavering commitment, we
-                strive to be the most trusted gold buying partner in India
-                through fair pricing and exceptional customer service.
+                We are on a mission to transform the way people experience gold
+                selling—by combining technology, empathy, and expertise to
+                deliver unmatched value and peace of mind.
               </p>
             </div>
           </div>

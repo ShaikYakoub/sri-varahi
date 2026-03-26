@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import CustomDropdown from "@/components/CustomDropdown";
 
 export default function GoldRateCard() {
   const [city, setCity] = useState("Hyderabad");
@@ -46,17 +47,12 @@ export default function GoldRateCard() {
 
         {/* City Selector */}
         <div className="mb-6">
-          <select
+          <CustomDropdown
+            label="City"
             value={city}
-            onChange={(e) => setCity(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium focus:ring-2 focus:ring-blue-500 dark:focus:ring-yellow-500 focus:border-transparent outline-none"
-          >
-            {cities.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
-          </select>
+            onChange={(v) => setCity(String(v))}
+            options={cities.map((c) => ({ value: c, label: c }))}
+          />
         </div>
 
         {/* Gold Price */}
@@ -69,7 +65,7 @@ export default function GoldRateCard() {
               Loading...
             </div>
           ) : (
-            <div className="text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-800 dark:from-yellow-400 dark:to-yellow-600 bg-clip-text text-transparent">
+            <div className="text-6xl font-extrabold bg-linear-to-r from-blue-600 to-blue-800 dark:from-yellow-400 dark:to-yellow-600 bg-clip-text text-transparent">
               ₹{rate.toLocaleString("en-IN")}
             </div>
           )}

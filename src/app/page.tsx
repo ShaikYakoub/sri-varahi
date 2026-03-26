@@ -7,7 +7,6 @@ import FAQs2 from "@/components/FAQs2";
 import LegacyOverview from "@/components/LegacyOverview";
 import ContactSection2 from "@/components/ContactSection2";
 import FloatingActions2 from "@/components/FloatingActions2";
-import PremiumAutoScroller from "@/components/PremiumAutoScroller";
 import CalculatorSection from "@/components/CalculatorSection";
 import Image from "next/image";
 
@@ -32,8 +31,7 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-block">
               <span className="px-4 py-2 bg-white/10 text-white rounded-full text-sm font-medium border border-white/30">
-                ⭐ <span className="font-bold">120+</span> Years of Trust &
-                Excellence
+                ⭐ Trusted Gold Buyers | Instant Payment
               </span>
             </div>
 
@@ -68,7 +66,7 @@ export default function Home() {
         </section>
 
         {/* Hero Image Slider */}
-        <HeroSlider />
+        {/* <HeroSlider /> */}
 
         {/* Stats Band */}
         <section className="no-top-radius no-bottom-radius bg-slate-50 dark:bg-black py-10 border-y border-blue-100/50 dark:border-amber-500/20">
@@ -109,10 +107,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Premium Partner Scroller */}
-        <PremiumAutoScroller />
-
         <CalculatorSection />
 
         <ServicesOverview />
@@ -151,7 +145,15 @@ export default function Home() {
         <section className="py-12 bg-slate-50 dark:bg-black">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20 order-1 md:order-none">
+                <Image
+                  src="/images/split-bank-transfer.webp"
+                  alt="Smartphone showing successful bank transfer with gold jewelry nearby"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="order-2 md:order-none">
                 <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
                   Instant Settlement
                 </span>
@@ -164,14 +166,6 @@ export default function Home() {
                   and no uncertainty. Your money reaches your bank account
                   quickly and securely.
                 </p>
-              </div>
-              <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20">
-                <Image
-                  src="/images/split-bank-transfer.webp"
-                  alt="Smartphone showing successful bank transfer with gold jewelry nearby"
-                  fill
-                  className="object-cover"
-                />
               </div>
             </div>
           </div>
@@ -191,8 +185,8 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-xl text-blue-600 dark:text-amber-400 mb-2">
-                <span className="font-semibold">19+</span> branches including
-                mobile branches across Andhra Pradesh and Telangana
+                <span className="font-semibold">3</span> branches across Andhra
+                Pradesh
               </p>
               <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light">
                 Experience our trusted service at any of our conveniently
@@ -209,8 +203,8 @@ export default function Home() {
                   Fixed Branches
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 font-light">
-                  Permanent locations in Hyderabad, Vijayawada, Visakhapatnam,
-                  and more major cities
+                  3 permanent branches across Andhra Pradesh, with more
+                  locations coming soon
                 </p>
               </div>
               <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black p-6 rounded-xl border border-blue-100/50 dark:border-amber-500/20 text-center hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors">

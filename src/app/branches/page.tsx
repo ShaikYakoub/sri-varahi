@@ -21,18 +21,18 @@ export default function BranchesPage() {
             priority
             quality={85}
           />
-          <div className="absolute inset-0 bg-blue-800/70 dark:bg-black/70" />
+          <div className="absolute inset-0 bg-black/55 dark:bg-black/70" />
           <div className="relative z-10 text-center text-white px-6 max-w-4xl">
             <div className="text-6xl mb-4">📍</div>
             <span className="inline-block px-4 py-1.5 bg-white/10 dark:bg-amber-400/20 text-white/90 dark:text-amber-100 text-sm font-medium rounded-full mb-4 border border-white/20 dark:border-amber-400/40">
-              🏢 <span className="font-semibold">19+</span> Locations
+              🏢 <span className="font-semibold">3</span> Locations
             </span>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Find Us Near You
             </h1>
             <p className="text-xl mb-4 text-white/80 font-light">
-              <span className="font-bold">19+</span> branches including mobile
-              branches across Andhra Pradesh and Telangana
+              <span className="font-bold">3</span> branches across Andhra
+              Pradesh
             </p>
             <p className="text-lg text-white/70 font-light">
               Visit any of our convenient locations for gold buying, selling,
@@ -120,9 +120,9 @@ export default function BranchesPage() {
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 font-light">
                     <span className="font-semibold text-blue-600 dark:text-amber-400">
-                      120+
+                      Trusted
                     </span>{" "}
-                    years of experience in gold valuation and customer service
+                    expertise in modern gold valuation and customer care
                   </p>
                 </div>
               </div>
