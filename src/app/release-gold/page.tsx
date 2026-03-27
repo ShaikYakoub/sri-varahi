@@ -19,10 +19,10 @@ export default function ReleaseGoldPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden md:min-h-125 flex items-center justify-center py-8 md:py-12">
+        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center justify-center py-8 md:py-12">
           <Image
-            src="/images/hero-release-gold-bg.webp"
-            alt=""
+            src="/images/release/hero.avif"
+            alt="gold necklace placed on a jewellary box"
             fill
             className="object-cover object-center"
             priority
@@ -89,7 +89,7 @@ export default function ReleaseGoldPage() {
               </div>
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20">
                 <Image
-                  src="/images/split-banks-supported.webp"
+                  src="/images/release/partnered-banks.avif"
                   alt="Different bank passbooks and loan documents arranged on desk"
                   fill
                   className="object-cover"
@@ -119,7 +119,7 @@ export default function ReleaseGoldPage() {
               </div>
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20 order-1 md:order-1">
                 <Image
-                  src="/images/split-loan-clearance.webp"
+                  src="/images/release/loan-clearance.avif"
                   alt="Gold, currency, and envelope arranged to represent loan settlement"
                   fill
                   className="object-cover"
@@ -164,7 +164,7 @@ export default function ReleaseGoldPage() {
         {/* Process Steps */}
         <section className="relative overflow-hidden py-10">
           <Image
-            src="/images/steps-process.webp"
+            src="/images/release/steps-process.avif"
             alt=""
             fill
             className="object-cover object-center"
@@ -180,108 +180,52 @@ export default function ReleaseGoldPage() {
               How It{" "}
               <span className="text-blue-600 dark:text-amber-500">Works</span>
             </h2>
-            <div className="grid md:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
               {[
                 {
-                  step: 1,
-                  title: "Submit Request",
-                  desc: "Fill the form with loan details and pledged ticket",
+                  image: "/images/release/process/1.avif",
+                  label: "Share Loan Details",
+                  sub: "Bank name and amount",
                 },
                 {
-                  step: 2,
-                  title: "Verification",
-                  desc: "We verify your details with the bank/NBFC",
+                  image: "/images/release/process/2.avif",
+                  label: "Gold Valuation",
+                  sub: "XRF and weighing",
                 },
                 {
-                  step: 3,
-                  title: "Gold Testing",
-                  desc: "XRF testing to determine exact purity and value",
+                  image: "/images/release/process/3.avif",
+                  label: "We Pay the Bank",
+                  sub: "Direct loan settlement",
                 },
                 {
-                  step: 4,
-                  title: "Loan Clearance",
-                  desc: "We pay off your loan amount directly",
+                  image: "/images/release/process/4.avif",
+                  label: "You Get the Balance",
+                  sub: "Remaining amount instantly",
                 },
-                {
-                  step: 5,
-                  title: "Get Balance",
-                  desc: "Receive the remaining amount instantly",
-                },
-              ].map((item) => (
+              ].map((step, i) => (
                 <div
-                  key={item.step}
-                  className="text-center bg-white/75 dark:bg-gray-900/65 rounded-xl p-4 border border-blue-100/70 dark:border-amber-500/20 backdrop-blur-xs"
+                  key={step.label}
+                  className="flex flex-col items-center text-center"
                 >
-                  <div className="w-16 h-16 bg-blue-600 dark:bg-amber-500 text-white dark:text-gray-900 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto shadow-lg">
-                    {item.step}
+                  <div className="relative w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white dark:border-gray-900 shadow-lg">
+                    <Image
+                      src={step.image}
+                      alt={step.label}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground dark:text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 font-light">
-                    {item.desc}
+                  <div className="w-7 h-7 rounded-full bg-blue-600 dark:bg-amber-500 text-white dark:text-gray-900 text-xs font-bold flex items-center justify-center mb-2">
+                    {i + 1}
+                  </div>
+                  <p className="text-sm font-semibold text-foreground dark:text-foreground">
+                    {step.label}
+                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    {step.sub}
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Process Strip - Release in 4 Steps */}
-        <section className="py-12 bg-white dark:bg-black">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-foreground">
-              Release Pledged Gold in 4 Steps
-            </h2>
-            <div className="relative">
-              <div className="hidden md:block absolute top-16 left-[15%] right-[15%] h-0.5 bg-blue-200 dark:bg-amber-500/30 z-0" />
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
-                {[
-                  {
-                    image: "/images/process-release-1-docs.webp",
-                    label: "Share Loan Details",
-                    sub: "Bank name and amount",
-                  },
-                  {
-                    image: "/images/process-release-2-value.webp",
-                    label: "Gold Valuation",
-                    sub: "XRF and weighing",
-                  },
-                  {
-                    image: "/images/process-release-3-settle.webp",
-                    label: "We Pay the Bank",
-                    sub: "Direct loan settlement",
-                  },
-                  {
-                    image: "/images/process-release-4-balance.webp",
-                    label: "You Get the Balance",
-                    sub: "Remaining amount instantly",
-                  },
-                ].map((step, i) => (
-                  <div
-                    key={step.label}
-                    className="flex flex-col items-center text-center"
-                  >
-                    <div className="relative w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white dark:border-gray-900 shadow-lg">
-                      <Image
-                        src={step.image}
-                        alt={step.label}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="w-7 h-7 rounded-full bg-blue-600 dark:bg-amber-500 text-white dark:text-gray-900 text-xs font-bold flex items-center justify-center mb-2">
-                      {i + 1}
-                    </div>
-                    <p className="text-sm font-semibold text-foreground dark:text-foreground">
-                      {step.label}
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {step.sub}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>
@@ -301,7 +245,7 @@ export default function ReleaseGoldPage() {
               <div className="bg-card dark:bg-card rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20">
                 <div className="relative h-72">
                   <Image
-                    src="/images/release-before.webp"
+                    src="/images/release/release-before.avif"
                     alt="Pledged gold kept locked inside safety box"
                     fill
                     className="object-cover"
@@ -316,7 +260,7 @@ export default function ReleaseGoldPage() {
               <div className="bg-card dark:bg-card rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20">
                 <div className="relative h-72">
                   <Image
-                    src="/images/release-after.webp"
+                    src="/images/release/release-after.avif"
                     alt="Released gold with successful payment confirmation"
                     fill
                     className="object-cover"

@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.avif"
+              src="/images/logo.avif"
               alt="Sri Varahi Logo"
               width={48}
               height={48}
@@ -101,8 +101,11 @@ export default function Navbar() {
               priority
             />
             <span
-              className="text-lg font-bold bg-linear-to-r from-yellow-400 via-yellow-600 to-yellow-400 bg-clip-text text-transparent select-none"
-              style={{ letterSpacing: "1px" }}
+              className="text-xl md:text-2xl font-extrabold bg-linear-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent select-none"
+              style={{
+                letterSpacing: "1px",
+                textShadow: "0 1.5px 2px rgba(0,0,0,0.18)",
+              }}
             >
               Sri Varahi
             </span>
@@ -126,7 +129,7 @@ export default function Navbar() {
               href="/release-gold"
               className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
             >
-              Release Pledged Gold
+              Release Gold
             </Link>
 
             <Link
@@ -223,7 +226,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="block text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
             >
-              Release Pledged Gold
+              Release Gold
             </Link>
 
             <Link

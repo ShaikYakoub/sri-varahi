@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import HeroSlider from "@/components/HeroSlider";
+// import HeroSlider from "@/components/HeroSlider";
 import ServicesOverview from "@/components/ServicesOverview";
 import Footer2 from "@/components/Footer2";
 import ComparisonTable2 from "@/components/ComparisonTable2";
@@ -17,10 +17,10 @@ export default function Home() {
 
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden md:min-h-[90vh] flex flex-col items-center justify-center text-center px-6 py-8 md:py-12">
+        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center text-center px-6 py-8 md:py-12">
           <Image
-            src="/images/hero-home-bg.webp"
-            alt=""
+            src="/images/homepage/hero.avif"
+            alt="gold being exchanged for cash at a Sri Varahi branch"
             fill
             className="object-cover object-center"
             priority
@@ -71,6 +71,21 @@ export default function Home() {
         {/* Stats Band */}
         <section className="no-top-radius no-bottom-radius bg-slate-50 dark:bg-black py-10 border-y border-blue-100/50 dark:border-amber-500/20">
           <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
+                Why Choose Sri Varahi
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                Our{" "}
+                <span className="text-blue-700 dark:text-amber-400">
+                  Heritage & Trust
+                </span>
+              </h2>
+              <p className="text-center text-gray-600 dark:text-gray-300 mt-2 font-light">
+                Over a century of excellence, transparency, and customer
+                satisfaction
+              </p>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-amber-400 mb-2">
@@ -131,7 +146,7 @@ export default function Home() {
               </div>
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20">
                 <Image
-                  src="/images/split-xrf-closeup.webp"
+                  src="/images/homepage/xrf-closeup.avif"
                   alt="Close-up XRF testing machine scanning a gold bangle"
                   fill
                   className="object-cover"
@@ -147,7 +162,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20 order-1 md:order-none">
                 <Image
-                  src="/images/split-bank-transfer.webp"
+                  src="/images/homepage/money-transfer.avif"
                   alt="Smartphone showing successful bank transfer with gold jewelry nearby"
                   fill
                   className="object-cover"
@@ -257,27 +272,27 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {[
                 {
-                  src: "/images/grid-type-bangles.webp",
+                  src: "/images/homepage/grid/bangles.avif",
                   alt: "Stacked gold bangles",
                 },
                 {
-                  src: "/images/grid-type-chains.webp",
+                  src: "/images/homepage/grid/chains.avif",
                   alt: "Coiled gold chains",
                 },
                 {
-                  src: "/images/grid-type-rings.webp",
+                  src: "/images/homepage/grid/rings.avif",
                   alt: "Collection of gold rings",
                 },
                 {
-                  src: "/images/grid-type-coins.webp",
+                  src: "/images/homepage/grid/coins.avif",
                   alt: "Stacked gold coins",
                 },
                 {
-                  src: "/images/grid-type-bars.webp",
+                  src: "/images/homepage/grid/bars.avif",
                   alt: "Single gold bar close-up",
                 },
                 {
-                  src: "/images/grid-type-broken.webp",
+                  src: "/images/homepage/grid/broken.avif",
                   alt: "Broken and mismatched gold jewelry",
                 },
               ].map((img) => (

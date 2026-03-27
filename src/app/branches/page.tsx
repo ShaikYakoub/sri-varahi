@@ -12,9 +12,9 @@ export default function BranchesPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden md:min-h-100 flex items-center justify-center py-8 md:py-12">
+        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center justify-center py-8 md:py-12">
           <Image
-            src="/images/hero-branches-bg.webp"
+            src="/images/branches/hero.avif"
             alt=""
             fill
             className="object-cover object-center"
@@ -38,12 +38,41 @@ export default function BranchesPage() {
               Visit any of our convenient locations for gold buying, selling,
               and loan release services
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <a
+                href="#branch-locator"
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-gray-900 font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-lg"
+              >
+                Get Directions
+              </a>
+              <a
+                href="tel:+919999999999"
+                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg shadow-md border-2 border-white/50 transition-all text-lg"
+              >
+                Contact Branch
+              </a>
+            </div>
           </div>
         </section>
 
         {/* Branch Locator */}
         <section className="py-10 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
+                Find a Branch
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                Branch{" "}
+                <span className="text-blue-700 dark:text-amber-400">
+                  Locator
+                </span>
+              </h2>
+              <p className="text-center text-gray-600 dark:text-gray-300 mt-2 font-light">
+                Search for the nearest Sri Varahi branch and get directions
+                instantly
+              </p>
+            </div>
             <BranchLocator />
           </div>
         </section>
@@ -67,7 +96,7 @@ export default function BranchesPage() {
               <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20 text-center hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors">
                 <div className="relative h-40">
                   <Image
-                    src="/images/card-xrf-testing.webp"
+                    src="/images/branches/xrf-testing.avif"
                     alt="XRF testing equipment setup"
                     fill
                     className="object-cover"
@@ -87,7 +116,7 @@ export default function BranchesPage() {
               <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20 text-center hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors">
                 <div className="relative h-40">
                   <Image
-                    src="/images/card-instant-payment.webp"
+                    src="/images/branches/instant-payments.avif"
                     alt="Instant payment confirmation on smartphone"
                     fill
                     className="object-cover"
@@ -107,7 +136,7 @@ export default function BranchesPage() {
               <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20 text-center hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors">
                 <div className="relative h-40">
                   <Image
-                    src="/images/card-expertise.webp"
+                    src="/images/branches/expert-team.avif"
                     alt="Professional gold testing instruments"
                     fill
                     className="object-cover"
@@ -150,7 +179,7 @@ export default function BranchesPage() {
               </div>
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20">
                 <Image
-                  src="/images/split-mobile-branch.webp"
+                  src="/images/branches/van.avif"
                   alt="Professional mobile branch van parked in a residential neighborhood"
                   fill
                   className="object-cover"

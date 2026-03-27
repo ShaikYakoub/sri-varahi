@@ -10,9 +10,6 @@ export default function BranchLocator() {
 
   return (
     <section id="branches" className="space-y-6">
-      <h2 className="text-3xl font-semibold text-center text-blue-600 dark:text-amber-400">
-        Branch Locator
-      </h2>
 
       {STATES.map((state) => (
         <div

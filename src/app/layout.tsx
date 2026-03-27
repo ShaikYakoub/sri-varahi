@@ -44,7 +44,7 @@ export default function RootLayout({
       className={`scroll-smooth light ${inter.variable}`}
     >
       <head>
-        <link rel="icon" href="/logo.avif" type="image/avif" />
+        <link rel="icon" href="/images/logo.avif" type="image/avif" />
       </head>
       <body className="antialiased font-sans">
         <script

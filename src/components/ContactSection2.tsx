@@ -44,7 +44,7 @@ export default function ContactSection() {
               >
                 +91 62626 67272
               </a>
-              
+
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-4">
                 Available Mon-Sat, 10 AM - 7 PM
               </p>
@@ -64,22 +64,7 @@ export default function ContactSection() {
             </p>
             <div className="flex justify-center gap-6 flex-wrap">
               <a
-                href="https://www.linkedin.com/company/valuegold"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-[#0A66C2] hover:bg-[#004182] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  className="w-7 h-7"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/valuegold.in"
+                href="https://www.instagram.com/srivarahigoldcompany?igsh=MmIwMDVpajJxa20x"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
@@ -94,7 +79,7 @@ export default function ContactSection() {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/valuegold.in"
+                href="https://share.google/oSPElhVA5IEfN6DTu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-[#1877F2] hover:bg-[#0C63D4] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
@@ -109,22 +94,7 @@ export default function ContactSection() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com/valuegold_in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
-                aria-label="Twitter/X"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.youtube.com/@valuegoldindia"
+                href="http://www.youtube.com/@SriVarahiGold"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-[#FF0000] hover:bg-[#CC0000] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"

@@ -4,10 +4,10 @@ export default function OurLegacy() {
   return (
     <div className="contents">
       {/* Heritage Section */}
-      <section className="relative overflow-hidden py-10 md:py-14 flex items-center">
+      <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center">
         <Image
-          src="/images/hero-legacy-bg.webp"
-          alt=""
+          src="/images/about/hero.avif"
+          alt="sri varahi team at work in the store"
           fill
           className="object-cover object-center"
           priority
@@ -51,12 +51,26 @@ export default function OurLegacy() {
       {/* Values, Vision & Mission Section */}
       <section className="py-8 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
+              What Drives Us
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              Our Values, Vision{" "}
+              <span className="text-blue-700 dark:text-amber-400">
+                & Mission
+              </span>
+            </h2>
+            <p className="text-center text-gray-600 dark:text-gray-300 mt-2 font-light">
+              The principles and purpose behind everything we do
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Values */}
             <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black rounded-2xl border border-blue-100/50 dark:border-amber-500/20 overflow-hidden">
               <div className="relative h-36">
                 <Image
-                  src="/images/accent-values.webp"
+                  src="/images/about/values.avif"
                   alt="Antique brass balance scale with gold weights"
                   fill
                   className="object-cover"
@@ -76,75 +90,95 @@ export default function OurLegacy() {
             </div>
 
             {/* Vision */}
-            <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black p-8 rounded-2xl border border-blue-100/50 dark:border-amber-500/20">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
-                Vision
-              </h3>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <strong className="text-blue-600 dark:text-amber-400">
-                    Empower
-                  </strong>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    {" "}
-                    – Be the most trusted gold buying partner
-                  </span>
-                </div>
-                <div>
-                  <strong className="text-blue-600 dark:text-amber-400">
-                    Expand
-                  </strong>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    {" "}
-                    – Build a nationwide network with standardized processes
-                  </span>
-                </div>
-                <div>
-                  <strong className="text-blue-600 dark:text-amber-400">
-                    Excel
-                  </strong>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    {" "}
-                    – Set benchmarks in the gold buying industry
-                  </span>
+            <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black rounded-2xl border border-blue-100/50 dark:border-amber-500/20 overflow-hidden">
+              <div className="relative h-36">
+                <Image
+                  src="/images/about/vision.avif"
+                  alt="Antique brass balance scale with gold weights"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
+                  Our Vision
+                </h3>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <strong className="text-blue-600 dark:text-amber-400">
+                      Empower
+                    </strong>
+                    <span className="text-gray-600 dark:text-gray-300">
+                      {" "}
+                      – Be the most trusted gold buying partner
+                    </span>
+                  </div>
+                  <div>
+                    <strong className="text-blue-600 dark:text-amber-400">
+                      Expand
+                    </strong>
+                    <span className="text-gray-600 dark:text-gray-300">
+                      {" "}
+                      – Build a nationwide network with standardized processes
+                    </span>
+                  </div>
+                  <div>
+                    <strong className="text-blue-600 dark:text-amber-400">
+                      Excel
+                    </strong>
+                    <span className="text-gray-600 dark:text-gray-300">
+                      {" "}
+                      – Set benchmarks in the gold buying industry
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Mission */}
-            <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black p-8 rounded-2xl border border-blue-100/50 dark:border-amber-500/20">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
-                Mission
-              </h3>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <strong className="text-blue-600 dark:text-amber-400">
-                    Integrity
-                  </strong>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    {" "}
-                    – Transparent pricing with no hidden conditions
-                  </span>
-                </div>
-                <div>
-                  <strong className="text-blue-600 dark:text-amber-400">
-                    Innovation
-                  </strong>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    {" "}
-                    – Advanced tools for accuracy and speed
-                  </span>
-                </div>
-                <div>
-                  <strong className="text-blue-600 dark:text-amber-400">
-                    Commitment
-                  </strong>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    {" "}
-                    – Put customers first with simple, respectful service
-                  </span>
+            <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black rounded-2xl border border-blue-100/50 dark:border-amber-500/20 overflow-hidden">
+              <div className="relative h-36">
+                <Image
+                  src="/images/about/mission.avif"
+                  alt="Antique brass balance scale with gold weights"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
+                  Our Mission
+                </h3>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <strong className="text-blue-600 dark:text-amber-400">
+                      Integrity
+                    </strong>
+                    <span className="text-gray-600 dark:text-gray-300">
+                      {" "}
+                      – Transparent pricing with no hidden conditions
+                    </span>
+                  </div>
+                  <div>
+                    <strong className="text-blue-600 dark:text-amber-400">
+                      Innovation
+                    </strong>
+                    <span className="text-gray-600 dark:text-gray-300">
+                      {" "}
+                      – Advanced tools for accuracy and speed
+                    </span>
+                  </div>
+                  <div>
+                    <strong className="text-blue-600 dark:text-amber-400">
+                      Commitment
+                    </strong>
+                    <span className="text-gray-600 dark:text-gray-300">
+                      {" "}
+                      – Put customers first with simple, respectful service
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -210,7 +244,7 @@ export default function OurLegacy() {
       <section className="relative overflow-hidden py-8 bg-white dark:bg-black">
         <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none">
           <Image
-            src="/images/texture-certificates.webp"
+            src="/images/about/certificates.avif"
             alt=""
             fill
             className="object-cover"
@@ -271,7 +305,7 @@ export default function OurLegacy() {
       <section className="relative overflow-hidden py-8 bg-gray-50 dark:bg-black">
         <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none">
           <Image
-            src="/images/accent-awards.webp"
+            src="/images/about/awards.avif"
             alt=""
             fill
             className="object-cover"

@@ -20,10 +20,10 @@ export default function SellGoldPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden md:min-h-125 flex items-center justify-center py-8 md:py-12">
+        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center justify-center py-8 md:py-12">
           <Image
-            src="/images/hero-sell-gold-bg.webp"
-            alt=""
+            src="/images/sell/hero.avif"
+            alt="gold on a weighing scale"
             fill
             className="object-cover object-center"
             priority
@@ -64,6 +64,20 @@ export default function SellGoldPage() {
 
         <section id="calculators" className="py-10 bg-white dark:bg-black">
           <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
+                Calculate Instantly
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                Gold{" "}
+                <span className="text-blue-700 dark:text-amber-400">
+                  Calculator
+                </span>
+              </h2>
+              <p className="text-center text-gray-600 dark:text-gray-300 mt-2 font-light">
+                Check live gold rates and estimate your payout in seconds
+              </p>
+            </div>
             <GoldRateCard />
             <GoldCalculator />
           </div>
@@ -89,7 +103,7 @@ export default function SellGoldPage() {
               </div>
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20">
                 <Image
-                  src="/images/split-what-we-accept.webp"
+                  src="/images/sell/accepted-gold.avif"
                   alt="Assorted gold items including jewelry, coins, and bars"
                   fill
                   className="object-cover"
@@ -118,7 +132,7 @@ export default function SellGoldPage() {
               </div>
               <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20 order-1 md:order-1">
                 <Image
-                  src="/images/split-no-deductions.webp"
+                  src="/images/sell/no-hidden-deductions.avif"
                   alt="Precision scale weighing gold chain with receipt beside it"
                   fill
                   className="object-cover"
@@ -170,99 +184,50 @@ export default function SellGoldPage() {
           </div>
         </section>
 
-        {/* Process Steps */}
-        <section className="relative overflow-hidden py-10">
-          <Image
-            src="/images/steps-process.webp"
-            alt=""
-            fill
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-white/92 dark:bg-black/85" />
-          <div className="relative z-10 max-w-6xl mx-auto px-6">
-            <span className="block text-center mb-4">
-              <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full">
-                Simple 4-Step Process
-              </span>
-            </span>
-            <h2 className="text-4xl font-bold text-center mb-12 text-foreground dark:text-foreground">
-              How It{" "}
-              <span className="text-blue-600 dark:text-amber-500">Works</span>
-            </h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              {[
-                {
-                  step: 1,
-                  title: "Visit Us",
-                  desc: "Walk into any branch or request doorstep pickup",
-                },
-                {
-                  step: 2,
-                  title: "Test & Verify",
-                  desc: "XRF purity testing done in front of you",
-                },
-                {
-                  step: 3,
-                  title: "Get Quote",
-                  desc: "Instant valuation at live market rates",
-                },
-                {
-                  step: 4,
-                  title: "Receive Payment",
-                  desc: "Money transferred to your bank within minutes",
-                },
-              ].map((item) => (
-                <div
-                  key={item.step}
-                  className="text-center bg-white/75 dark:bg-gray-900/65 rounded-xl p-4 border border-blue-100/70 dark:border-amber-500/20 backdrop-blur-xs"
-                >
-                  <div className="w-16 h-16 bg-blue-600 dark:bg-amber-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto shadow-lg">
-                    {item.step}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground dark:text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 font-light">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Process Strip - Sell Gold in 5 Steps */}
         <section className="py-12 bg-white dark:bg-black">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-foreground">
-              Sell Gold in 5 Steps
-            </h2>
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
+                How It Works
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                Sell Gold in{" "}
+                <span className="text-blue-700 dark:text-amber-400">
+                  5 Steps
+                </span>
+              </h2>
+              <p className="text-center text-gray-600 dark:text-gray-300 mt-2 font-light">
+                The simplest, fastest, and most transparent way to turn your
+                gold into cash
+              </p>
+            </div>
             <div className="relative">
               <div className="hidden md:block absolute top-16 left-[10%] right-[10%] h-0.5 bg-blue-200 dark:bg-amber-500/30 z-0" />
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6 relative z-10">
                 {[
                   {
-                    image: "/images/process-sell-1-arrive.webp",
+                    image: "/images/sell/process/1.avif",
                     label: "Visit Our Branch",
                     sub: "Any location near you",
                   },
                   {
-                    image: "/images/process-sell-2-submit.webp",
+                    image: "/images/sell/process/2.avif",
                     label: "Submit Your Gold",
                     sub: "Jewelry, coins, or bars",
                   },
                   {
-                    image: "/images/process-sell-3-test.webp",
+                    image: "/images/sell/process/3.avif",
                     label: "XRF Purity Test",
                     sub: "Takes under 2 minutes",
                   },
                   {
-                    image: "/images/process-sell-4-weigh.webp",
+                    image: "/images/sell/process/4.avif",
                     label: "Weighing & Valuation",
                     sub: "Live market-rate pricing",
                   },
                   {
-                    image: "/images/process-sell-5-pay.webp",
+                    image: "/images/sell/process/5.avif",
                     label: "Instant Payment",
                     sub: "NEFT/RTGS in minutes",
                   },
@@ -309,7 +274,7 @@ export default function SellGoldPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:h-130">
               <div className="relative row-span-2 md:col-span-1 rounded-xl overflow-hidden min-h-60">
                 <Image
-                  src="/images/branch-interior-main.webp"
+                  src="/images/sell/inside-our-branch/1.avif"
                   alt="Main interior view of Value Gold branch"
                   fill
                   className="object-cover"
@@ -317,7 +282,7 @@ export default function SellGoldPage() {
               </div>
               <div className="relative rounded-xl overflow-hidden col-span-1 md:col-span-2 h-56">
                 <Image
-                  src="/images/branch-xrf-table.webp"
+                  src="/images/sell/inside-our-branch/2.avif"
                   alt="XRF testing table setup inside branch"
                   fill
                   className="object-cover"
@@ -325,7 +290,7 @@ export default function SellGoldPage() {
               </div>
               <div className="relative rounded-xl overflow-hidden col-span-1 md:col-span-1 h-56">
                 <Image
-                  src="/images/branch-safe.webp"
+                  src="/images/sell/inside-our-branch/3.avif"
                   alt="Secure vault area in branch"
                   fill
                   className="object-cover"
@@ -333,7 +298,7 @@ export default function SellGoldPage() {
               </div>
               <div className="relative rounded-xl overflow-hidden col-span-1 md:col-span-1 h-56">
                 <Image
-                  src="/images/branch-weighing.webp"
+                  src="/images/sell/inside-our-branch/4.avif"
                   alt="Precision weighing station at branch"
                   fill
                   className="object-cover"

@@ -25,7 +25,7 @@ export default function ServicesOverview() {
           <div className="bg-card dark:bg-card rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 hover:shadow-md hover:border-blue-300 dark:hover:border-amber-500/40 transition-all">
             <div className="relative h-32">
               <Image
-                src="/images/accent-sell-gold.webp"
+                src="/images/homepage/sell-gold.avif"
                 alt="Gold ring close-up"
                 fill
                 className="object-cover"
@@ -57,7 +57,7 @@ export default function ServicesOverview() {
           <div className="bg-card dark:bg-card rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 hover:shadow-md hover:border-blue-300 dark:hover:border-amber-500/40 transition-all">
             <div className="relative h-32">
               <Image
-                src="/images/accent-release-gold.webp"
+                src="/images/homepage/release-gold.avif"
                 alt="Gold bangles with financial documents"
                 fill
                 className="object-cover"
@@ -88,7 +88,7 @@ export default function ServicesOverview() {
           <div className="bg-card dark:bg-card rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 hover:shadow-md hover:border-blue-300 dark:hover:border-amber-500/40 transition-all">
             <div className="relative h-32">
               <Image
-                src="/images/accent-dispatcher.webp"
+                src="/images/homepage/van.avif"
                 alt="Vehicle ready for doorstep gold pickup"
                 fill
                 className="object-cover"
