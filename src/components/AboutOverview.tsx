@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function LegacyOverview() {
+export default function AboutOverview() {
   return (
-    <section id="legacy" className="py-10 bg-slate-50 dark:bg-black">
+    <section id="about" className="py-10 bg-slate-50 dark:bg-black">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
@@ -84,10 +84,10 @@ export default function LegacyOverview() {
         {/* CTA */}
         <div className="text-center">
           <Link
-            href="/legacy"
+            href="/about"
             className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-gray-900 font-bold rounded-lg shadow-lg transition-all"
           >
-            Explore Our Complete Legacy →
+            Explore Our Complete Story →
           </Link>
         </div>
       </div>

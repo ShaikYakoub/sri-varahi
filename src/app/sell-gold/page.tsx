@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
-import Footer2 from "@/components/Footer2";
-import FloatingActions2 from "@/components/FloatingActions2";
+import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import GoldRateCard from "@/components/GoldRateCard";
 import GoldCalculator from "@/components/GoldCalculator";
 import Image from "next/image";
@@ -445,8 +445,8 @@ export default function SellGoldPage() {
           </div>
         </section>
       </main>
-      <FloatingActions2 />
-      <Footer2 />
+      <FloatingActions />
+      <Footer />
     </>
   );
 }

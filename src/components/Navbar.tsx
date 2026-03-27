@@ -140,7 +140,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/legacy"
+              href="/about"
               className="text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
             >
               About Us
@@ -238,11 +238,11 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/legacy"
+              href="/about"
               onClick={() => setIsOpen(false)}
               className="block text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
             >
-              Our Legacy
+              About Us
             </Link>
           </div>
         )}

@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import Footer2 from "@/components/Footer2";
-import FloatingActions2 from "@/components/FloatingActions2";
+import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import BranchLocator from "@/components/BranchLocator";
 
 export default function BranchesPage() {
@@ -189,8 +189,8 @@ export default function BranchesPage() {
           </div>
         </section>
       </main>
-      <FloatingActions2 />
-      <Footer2 />
+      <FloatingActions />
+      <Footer />
     </>
   );
 }

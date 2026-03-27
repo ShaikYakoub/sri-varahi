@@ -10,7 +10,6 @@ export default function BranchLocator() {
 
   return (
     <section id="branches" className="space-y-6">
-
       {STATES.map((state) => (
         <div
           key={state}
@@ -38,7 +37,7 @@ export default function BranchLocator() {
                     className="bg-secondary/50 dark:bg-secondary/30 border border-blue-100 dark:border-amber-500/20 rounded-xl p-5 hover:border-blue-300 dark:hover:border-amber-500/40 hover:shadow-md transition-all"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-amber-500/20 flex items-center justify-center shrink-0">
                         <svg
                           className="w-5 h-5 text-blue-600 dark:text-amber-400"
                           fill="currentColor"

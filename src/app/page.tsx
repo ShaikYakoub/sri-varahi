@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 // import HeroSlider from "@/components/HeroSlider";
 import ServicesOverview from "@/components/ServicesOverview";
-import Footer2 from "@/components/Footer2";
-import ComparisonTable2 from "@/components/ComparisonTable2";
-import FAQs2 from "@/components/FAQs2";
-import LegacyOverview from "@/components/LegacyOverview";
-import ContactSection2 from "@/components/ContactSection2";
-import FloatingActions2 from "@/components/FloatingActions2";
+import Footer from "@/components/Footer";
+import ComparisonTable from "@/components/ComparisonTable";
+import FAQs from "@/components/FAQs";
+import AboutOverview from "@/components/AboutOverview";
+import ContactSection from "@/components/ContactSection";
+import FloatingActions from "@/components/FloatingActions";
 import CalculatorSection from "@/components/CalculatorSection";
 import Image from "next/image";
 
@@ -160,7 +160,7 @@ export default function Home() {
         <section className="py-12 bg-slate-50 dark:bg-black">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20 order-1 md:order-none">
+              <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-blue-100/50 dark:border-amber-500/20 order-1 md:order-0">
                 <Image
                   src="/images/homepage/money-transfer.avif"
                   alt="Smartphone showing successful bank transfer with gold jewelry nearby"
@@ -168,7 +168,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="order-2 md:order-none">
+              <div className="order-2 md:order-0">
                 <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full mb-4">
                   Instant Settlement
                 </span>
@@ -254,7 +254,7 @@ export default function Home() {
           </div>
         </section>
 
-        <ComparisonTable2 />
+        <ComparisonTable />
 
         {/* Gold Types Grid */}
         <section className="py-12 bg-white dark:bg-black">
@@ -312,13 +312,13 @@ export default function Home() {
           </div>
         </section>
 
-        <FAQs2 />
-        <LegacyOverview />
-        <ContactSection2 />
+        <FAQs />
+        <AboutOverview />
+        <ContactSection />
       </main>
 
-      <FloatingActions2 />
-      <Footer2 />
+      <FloatingActions />
+      <Footer />
     </>
   );
 }

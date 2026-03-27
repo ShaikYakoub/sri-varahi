@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function OurLegacy() {
+export default function OurAbout() {
   return (
     <div className="contents">
       {/* Heritage Section */}
@@ -20,7 +20,7 @@ export default function OurLegacy() {
               ⭐ Modern Gold Experts
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              🏛️ Our Legacy of Trust
+              🏛️ Our Story of Trust
             </h2>
             <p className="text-xl text-white/70 font-light">
               Built on transparency, technology, and customer-first values
