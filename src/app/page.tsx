@@ -1,3 +1,5 @@
+// Enable ISR (Incremental Static Regeneration) for Cloudflare Pages
+export const revalidate = 60; // Revalidate every 60 seconds in production
 import Navbar from "@/components/Navbar";
 // import HeroSlider from "@/components/HeroSlider";
 import ServicesOverview from "@/components/ServicesOverview";
