@@ -50,12 +50,7 @@ export default function AboutOverview() {
 
         {/* Vision & Mission */}
         <div className="relative overflow-hidden bg-card dark:bg-card p-8 rounded-2xl border-2 border-blue-400 dark:border-amber-500 mb-12">
-          <Image
-            src="/images/texture-heritage.webp"
-            alt=""
-            fill
-            className="object-cover opacity-20 dark:opacity-15"
-          />
+          {/* Removed missing texture-heritage.webp background image */}
           <div className="absolute inset-0 bg-white/80 dark:bg-black/70" />
           <div className="relative z-10 grid md:grid-cols-2 gap-8">
             <div>

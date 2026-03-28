@@ -28,7 +28,6 @@ export default function GoldCalculator() {
         <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
           Get instant valuation of your gold
         </p>
-
         <div className="bg-yellow-50 dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-blue-200 dark:border-amber-500/30">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Purity Custom Dropdown */}

@@ -45,6 +45,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={`scroll-smooth light ${inter.variable}`}
+      data-scroll-behavior="smooth"
     >
       <head>
         <link rel="icon" href="/images/logo.avif" type="image/avif" />

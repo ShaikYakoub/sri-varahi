@@ -241,6 +241,7 @@ export default function SellGoldPage() {
                         src={step.image}
                         alt={step.label}
                         fill
+                        sizes="112px"
                         className="object-cover"
                       />
                     </div>

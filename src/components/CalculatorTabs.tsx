@@ -54,14 +54,12 @@ export default function CalculatorTabs({
           ))}
         </div>
       )}
-      <div className="bg-white dark:bg-black rounded-2xl shadow-lg p-6 border border-blue-100/50 dark:border-amber-500/20">
-        {activeTab === "sell" && tabs.some((t) => t.value === "sell") && (
-          <GoldCalculator />
-        )}
-        {activeTab === "pledged" && tabs.some((t) => t.value === "pledged") && (
-          <PledgedGoldCalculator />
-        )}
-      </div>
+      {activeTab === "sell" && tabs.some((t) => t.value === "sell") && (
+        <GoldCalculator />
+      )}
+      {activeTab === "pledged" && tabs.some((t) => t.value === "pledged") && (
+        <PledgedGoldCalculator />
+      )}
     </div>
   );
 }

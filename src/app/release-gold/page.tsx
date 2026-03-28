@@ -163,12 +163,6 @@ export default function ReleaseGoldPage() {
 
         {/* Process Steps */}
         <section className="relative overflow-hidden py-10">
-          <Image
-            src="/images/release/steps-process.avif"
-            alt=""
-            fill
-            className="object-cover object-center"
-          />
           <div className="absolute inset-0 bg-white/92 dark:bg-black/85" />
           <div className="relative z-10 max-w-6xl mx-auto px-6">
             <span className="block text-center mb-4">
@@ -212,6 +206,7 @@ export default function ReleaseGoldPage() {
                       src={step.image}
                       alt={step.label}
                       fill
+                      sizes="112px"
                       className="object-cover"
                     />
                   </div>

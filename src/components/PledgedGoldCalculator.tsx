@@ -84,16 +84,15 @@ export default function PledgedGoldCalculator() {
   };
 
   return (
-    <section id="pledged-calculator" className="py-16 bg-gray-50 dark:bg-black">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="pledged-calculator" className="py-16">
+      <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-600 dark:text-amber-400">
           Pledged Gold Release Calculator
         </h2>
         <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
           Calculate how much you&apos;ll receive after loan repayment
         </p>
-
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-blue-200 dark:border-amber-500/30">
+        <div className="bg-yellow-50 dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-blue-200 dark:border-amber-500/30">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Financial Institute */}
             <CustomDropdown
@@ -162,19 +161,6 @@ export default function PledgedGoldCalculator() {
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium focus:ring-2 focus:ring-blue-500 dark:focus:ring-yellow-500 focus:border-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
-
-            {/* Gold Purity Custom Dropdown */}
-            <CustomDropdown
-              label="Gold Purity"
-              value={purity}
-              onChange={(v) => setPurity(Number(v))}
-              options={[
-                { value: 24, label: "24K" },
-                { value: 22, label: "22K" },
-                { value: 18, label: "18K" },
-                { value: 14, label: "14K" },
-              ]}
-            />
           </div>
 
           {/* Calculate Button */}

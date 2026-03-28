@@ -42,9 +42,19 @@ export default function ServiceCard({
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      ) : (
+      ) : image && image !== "" ? (
         <div className="relative w-full h-60 bg-white">
-          <Image src={image} alt={imageAlt} fill className="object-cover" />
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <div className="relative w-full h-60 bg-blue-50 dark:bg-amber-900 flex items-center justify-center">
+          <span className="text-5xl text-blue-300 dark:text-amber-400">🏢</span>
         </div>
       )}
       <div className="p-6">

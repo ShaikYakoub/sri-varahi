@@ -99,6 +99,7 @@ export default function Navbar() {
               height={48}
               className="mr-2"
               priority
+              style={{ width: "auto", height: "auto" }}
             />
             <span
               className="text-xl md:text-2xl font-extrabold bg-linear-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent select-none"
@@ -214,6 +215,13 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3 border-t border-blue-200 dark:border-amber-500/30 pt-4">
+            <Link
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className="block text-foreground dark:text-foreground hover:text-blue-600 dark:hover:text-amber-400 transition-colors font-medium"
+            >
+              Home
+            </Link>
             <Link
               href="/sell-gold"
               onClick={() => setIsOpen(false)}

@@ -213,55 +213,6 @@ export default function OurAbout() {
           </div>
         </div>
       </section>
-
-      {/* Awards Section
-      <section className="relative overflow-hidden py-8 bg-gray-50 dark:bg-black">
-        <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none">
-          <Image
-            src="/images/about/awards.avif"
-            alt=""
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-6">
-          <span className="block text-center mb-4">
-            <span className="inline-block px-4 py-1.5 bg-blue-50 dark:bg-amber-500/10 text-blue-600 dark:text-amber-400 text-sm font-medium rounded-full">
-              Recognition
-            </span>
-          </span>
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-            🏆 Awards &{" "}
-            <span className="text-blue-600 dark:text-amber-500">
-              Recognition
-            </span>
-          </h2>
-          <p className="text-center text-gray-600 dark:text-gray-300 mb-12 font-light">
-            Honoring our commitment to excellence
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { year: "2000", name: "award" },
-              { year: "2025", name: "Success Awards" },
-              { year: "2000", name: "Icon Awards" },
-              { year: "2000", name: "Business Awards" },
-            ].map((award, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-blue-50/50 dark:bg-amber-500/5 rounded-xl border border-blue-100/50 dark:border-amber-500/20 hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors"
-              >
-                <div className="text-5xl mb-3">🏆</div>
-                <h3 className="font-semibold text-blue-600 dark:text-amber-400 mb-1">
-                  {award.name}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300 font-light">
-                  {award.year}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

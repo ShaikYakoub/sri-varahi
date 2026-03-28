@@ -91,10 +91,10 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-amber-400 mb-2">
-                  3
+                  10K+
                 </div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-gray-300 font-light">
-                  Branches in AP
+                  Pledged Gold Released
                 </div>
               </div>
               <div className="text-center">
@@ -306,6 +306,7 @@ export default function Home() {
                     src={img.src}
                     alt={img.alt}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
