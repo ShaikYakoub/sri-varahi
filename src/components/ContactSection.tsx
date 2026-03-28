@@ -67,7 +67,7 @@ export default function ContactSection() {
                 href="https://www.instagram.com/srivarahigoldcompany?igsh=MmIwMDVpajJxa20x"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
+                className="w-14 h-14 bg-linear-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
                 aria-label="Instagram"
               >
                 <svg

@@ -99,7 +99,7 @@ export default function PledgedGoldCalculator() {
             <CustomDropdown
               label="Financial Institute"
               value={institute}
-              onChange={setInstitute}
+              onChange={(value) => setInstitute(String(value))}
               options={institutes.map((inst) => ({ value: inst, label: inst }))}
             />
 

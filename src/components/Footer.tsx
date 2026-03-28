@@ -66,7 +66,6 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-8 h-8 bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
               >
                 <svg
                   className="w-4 h-4"
