@@ -96,22 +96,12 @@ export default function PledgedGoldCalculator() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-blue-200 dark:border-amber-500/30">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Financial Institute */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                Financial Institute
-              </label>
-              <select
-                value={institute}
-                onChange={(e) => setInstitute(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium focus:ring-2 focus:ring-blue-500 dark:focus:ring-yellow-500 focus:border-transparent outline-none"
-              >
-                {institutes.map((inst) => (
-                  <option key={inst} value={inst}>
-                    {inst}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <CustomDropdown
+              label="Financial Institute"
+              value={institute}
+              onChange={setInstitute}
+              options={institutes.map((inst) => ({ value: inst, label: inst }))}
+            />
 
             {/* Custom Institute Name */}
             {institute === "Other" && (
@@ -146,7 +136,7 @@ export default function PledgedGoldCalculator() {
                 { value: 1000, label: "1000g" },
               ]}
             />
-            {/* Purity Custom Dropdown */}
+            {/* Gold Purity Custom Dropdown */}
             <CustomDropdown
               label="Gold Purity"
               value={purity}
@@ -173,22 +163,18 @@ export default function PledgedGoldCalculator() {
               />
             </div>
 
-            {/* Gold Purity */}
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                Gold Purity
-              </label>
-              <select
-                value={purity}
-                onChange={(e) => setPurity(Number(e.target.value))}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium focus:ring-2 focus:ring-blue-500 dark:focus:ring-yellow-500 focus:border-transparent outline-none"
-              >
-                <option value={24}>24K</option>
-                <option value={22}>22K</option>
-                <option value={18}>18K</option>
-                <option value={14}>14K</option>
-              </select>
-            </div>
+            {/* Gold Purity Custom Dropdown */}
+            <CustomDropdown
+              label="Gold Purity"
+              value={purity}
+              onChange={(v) => setPurity(Number(v))}
+              options={[
+                { value: 24, label: "24K" },
+                { value: 22, label: "22K" },
+                { value: 18, label: "18K" },
+                { value: 14, label: "14K" },
+              ]}
+            />
           </div>
 
           {/* Calculate Button */}

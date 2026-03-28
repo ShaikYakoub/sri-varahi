@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function OurAbout() {
   return (
@@ -65,123 +66,35 @@ export default function OurAbout() {
               The principles and purpose behind everything we do
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Values */}
-            <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black rounded-2xl border border-blue-100/50 dark:border-amber-500/20 overflow-hidden">
-              <div className="relative h-36">
-                <Image
-                  src="/images/about/values.avif"
-                  alt="Antique brass balance scale with gold weights"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-4xl mb-4">💎</div>
-                <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
-                  Our Values
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  We stand for trust, transparency, and fairness. Every customer
-                  who walks in is treated with dignity, and every gram of gold
-                  is evaluated with honesty, accuracy, and respect.
-                </p>
-              </div>
-            </div>
-
-            {/* Vision */}
-            <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black rounded-2xl border border-blue-100/50 dark:border-amber-500/20 overflow-hidden">
-              <div className="relative h-36">
-                <Image
-                  src="/images/about/vision.avif"
-                  alt="Antique brass balance scale with gold weights"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
-                  Our Vision
-                </h3>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <strong className="text-blue-600 dark:text-amber-400">
-                      Empower
-                    </strong>
-                    <span className="text-gray-600 dark:text-gray-300">
-                      {" "}
-                      – Be the most trusted gold buying partner
-                    </span>
-                  </div>
-                  <div>
-                    <strong className="text-blue-600 dark:text-amber-400">
-                      Expand
-                    </strong>
-                    <span className="text-gray-600 dark:text-gray-300">
-                      {" "}
-                      – Build a nationwide network with standardized processes
-                    </span>
-                  </div>
-                  <div>
-                    <strong className="text-blue-600 dark:text-amber-400">
-                      Excel
-                    </strong>
-                    <span className="text-gray-600 dark:text-gray-300">
-                      {" "}
-                      – Set benchmarks in the gold buying industry
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mission */}
-            <div className="bg-linear-to-br from-blue-50/50 to-white dark:from-amber-500/5 dark:to-black rounded-2xl border border-blue-100/50 dark:border-amber-500/20 overflow-hidden">
-              <div className="relative h-36">
-                <Image
-                  src="/images/about/mission.avif"
-                  alt="Antique brass balance scale with gold weights"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-2xl font-semibold mb-4 text-blue-600 dark:text-amber-400">
-                  Our Mission
-                </h3>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <strong className="text-blue-600 dark:text-amber-400">
-                      Integrity
-                    </strong>
-                    <span className="text-gray-600 dark:text-gray-300">
-                      {" "}
-                      – Transparent pricing with no hidden conditions
-                    </span>
-                  </div>
-                  <div>
-                    <strong className="text-blue-600 dark:text-amber-400">
-                      Innovation
-                    </strong>
-                    <span className="text-gray-600 dark:text-gray-300">
-                      {" "}
-                      – Advanced tools for accuracy and speed
-                    </span>
-                  </div>
-                  <div>
-                    <strong className="text-blue-600 dark:text-amber-400">
-                      Commitment
-                    </strong>
-                    <span className="text-gray-600 dark:text-gray-300">
-                      {" "}
-                      – Put customers first with simple, respectful service
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
+            <ServiceCard
+              image="/images/about/values.avif"
+              imageAlt="Antique brass balance scale with gold weights"
+              icon={"💎"}
+              title="Our Values"
+              description="We stand for trust, transparency, and fairness. Every customer who walks in is treated with dignity, and every gram of gold is evaluated with honesty, accuracy, and respect."
+              benefits={[]}
+            />
+            <ServiceCard
+              image="/images/about/vision.avif"
+              imageAlt="Vision illustration"
+              icon={"🎯"}
+              title="Our Vision"
+              description={
+                "Empower – Be the most trusted gold buying partner. Expand – Build a nationwide network with standardized processes. Excel – Set benchmarks in the gold buying industry."
+              }
+              benefits={[]}
+            />
+            <ServiceCard
+              image="/images/about/mission.avif"
+              imageAlt="Mission illustration"
+              icon={"🎯"}
+              title="Our Mission"
+              description={
+                "Integrity – Transparent pricing with no hidden conditions. Innovation – Advanced tools for accuracy and speed. Commitment – Put customers first with simple, respectful service."
+              }
+              benefits={[]}
+            />
           </div>
         </div>
       </section>

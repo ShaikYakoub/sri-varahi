@@ -10,14 +10,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://valuegold.in"),
-  title: "Value Gold - Best Gold Buyers in India | 120+ Years Trust",
+  title:
+    "Value Gold - Best Gold Buyers in Andhra Pradesh | Trusted & Transparent",
   description:
-    "Sell your gold at the best rates with complete transparency. 120+ years of heritage, instant payment, XRF testing. 3 branches across Andhra Pradesh and more coming soon.",
+    "Sell your gold at the best rates with complete transparency. Modern technology, instant payment, XRF testing. 3 branches across Andhra Pradesh and more coming soon.",
   keywords:
     "gold buyers, sell gold, gold rate today, best gold buyers India, Value Gold, CapsGold",
   openGraph: {
-    title: "Value Gold - Best Gold Buyers in India",
-    description: "120+ years of trust. Instant payment. XRF testing.",
+    title: "Value Gold - Best Gold Buyers in Andhra Pradesh",
+    description:
+      "Modern, transparent, and trusted. Instant payment. XRF testing.",
     url: "https://valuegold.in",
     siteName: "Value Gold",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
@@ -26,8 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Value Gold - Best Gold Buyers in India",
-    description: "120+ years of trust. Instant payment. XRF testing.",
+    title: "Value Gold - Best Gold Buyers in Andhra Pradesh",
+    description:
+      "Modern, transparent, and trusted. Instant payment. XRF testing.",
     images: ["/og-image.jpg"],
   },
 };
@@ -47,7 +50,9 @@ export default function RootLayout({
         <link rel="icon" href="/images/logo.avif" type="image/avif" />
       </head>
       <body className="antialiased font-sans">
-        <script
+        {/* Next.js 13+ does not execute <script> tags in layouts. Use <template> as a workaround for client-side theme init. */}
+        <template
+          data-theme-init
           dangerouslySetInnerHTML={{
             __html: `
               (function() {

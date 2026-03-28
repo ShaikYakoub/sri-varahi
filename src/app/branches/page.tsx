@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import BranchLocator from "@/components/BranchLocator";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function BranchesPage() {
   return (
@@ -93,68 +94,31 @@ export default function BranchesPage() {
               ?
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20 text-center hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors">
-                <div className="relative h-40">
-                  <Image
-                    src="/images/branches/xrf-testing.avif"
-                    alt="XRF testing equipment setup"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-4xl mb-4">🔬</div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-amber-400">
-                    XRF Testing
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 font-light">
-                    Advanced technology for accurate purity testing right in
-                    front of you
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20 text-center hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors">
-                <div className="relative h-40">
-                  <Image
-                    src="/images/branches/instant-payments.avif"
-                    alt="Instant payment confirmation on smartphone"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-4xl mb-4">💰</div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-amber-400">
-                    Instant Payment
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 font-light">
-                    Get your money within minutes via NEFT/RTGS or cash (up to
-                    ₹2 lakhs)
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-blue-100/50 dark:border-amber-500/20 text-center hover:border-blue-300 dark:hover:border-amber-500/40 transition-colors">
-                <div className="relative h-40">
-                  <Image
-                    src="/images/branches/expert-team.avif"
-                    alt="Professional gold testing instruments"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-4xl mb-4">👥</div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-amber-400">
-                    Expert Team
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 font-light">
-                    <span className="font-semibold text-blue-600 dark:text-amber-400">
-                      Trusted
-                    </span>{" "}
-                    expertise in modern gold valuation and customer care
-                  </p>
-                </div>
-              </div>
+              {/* Use ServiceCard for each card */}
+              <ServiceCard
+                image="/images/branches/xrf-testing.avif"
+                imageAlt="XRF testing equipment setup"
+                icon={<span>🔬</span>}
+                title="XRF Testing"
+                description="Advanced technology for accurate purity testing right in front of you"
+                benefits={[]}
+              />
+              <ServiceCard
+                image="/images/branches/instant-payments.avif"
+                imageAlt="Instant payment confirmation on smartphone"
+                icon={<span>💰</span>}
+                title="Instant Payment"
+                description="Get your money within minutes via NEFT/RTGS or cash (up to ₹2 lakhs)"
+                benefits={[]}
+              />
+              <ServiceCard
+                image="/images/branches/expert-team.avif"
+                imageAlt="Professional gold testing instruments"
+                icon={<span>👥</span>}
+                title="Expert Team"
+                description="Trusted expertise in modern gold valuation and customer care"
+                benefits={[]}
+              />
             </div>
           </div>
         </section>

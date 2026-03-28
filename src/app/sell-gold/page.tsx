@@ -271,37 +271,46 @@ export default function SellGoldPage() {
                 How It Looks At Our Branch
               </h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:h-130">
-              <div className="relative row-span-2 md:col-span-1 rounded-xl overflow-hidden min-h-60">
+            <div className="grid grid-rows-3 gap-3">
+              {/* Top: full width image, aspect-video for wide look */}
+              <div className="relative rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 bg-white dark:bg-black aspect-video row-span-1">
                 <Image
                   src="/images/sell/inside-our-branch/1.avif"
                   alt="Main interior view of Value Gold branch"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 900px"
                 />
               </div>
-              <div className="relative rounded-xl overflow-hidden col-span-1 md:col-span-2 h-56">
+              {/* Middle: left is former bottom image, right is secure vault */}
+              <div className="grid grid-cols-2 gap-3 row-span-1">
+                <div className="relative rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 bg-white dark:bg-black">
+                  <Image
+                    src="/images/sell/inside-our-branch/4.avif"
+                    alt="Precision weighing station at branch"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 50vw, 450px"
+                  />
+                </div>
+                <div className="relative rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 bg-white dark:bg-black">
+                  <Image
+                    src="/images/sell/inside-our-branch/3.avif"
+                    alt="Secure vault area in branch"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 50vw, 450px"
+                  />
+                </div>
+              </div>
+              {/* Bottom: full width image, now XRF table */}
+              <div className="relative rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 bg-white dark:bg-black aspect-video row-span-1">
                 <Image
                   src="/images/sell/inside-our-branch/2.avif"
                   alt="XRF testing table setup inside branch"
                   fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative rounded-xl overflow-hidden col-span-1 md:col-span-1 h-56">
-                <Image
-                  src="/images/sell/inside-our-branch/3.avif"
-                  alt="Secure vault area in branch"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative rounded-xl overflow-hidden col-span-1 md:col-span-1 h-56">
-                <Image
-                  src="/images/sell/inside-our-branch/4.avif"
-                  alt="Precision weighing station at branch"
-                  fill
-                  className="object-cover"
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 900px"
                 />
               </div>
             </div>

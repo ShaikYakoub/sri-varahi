@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us - Value Gold | 120+ Years of Trust",
+  title: "About Us - Value Gold | Trusted Gold Buyers",
   description:
-    "Discover the 120+ year journey of Value Gold and CapsGold, built on trust, transparency, and customer-first service.",
+    "Learn about Value Gold's commitment to transparency, technology, and customer-first service in Andhra Pradesh.",
 };
 
 export default function AboutLayout({

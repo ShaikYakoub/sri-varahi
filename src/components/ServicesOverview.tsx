@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function ServicesOverview() {
   return (
@@ -20,100 +20,31 @@ export default function ServicesOverview() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Service 1 */}
-          <div className="bg-card dark:bg-card rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 hover:shadow-md hover:border-blue-300 dark:hover:border-amber-500/40 transition-all">
-            <div className="relative h-32">
-              <Image
-                src="/images/homepage/sell-gold.avif"
-                alt="Gold ring close-up"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <div className="text-5xl mb-4">💰</div>
-              <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-amber-400">
-                Sell Gold
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 font-light mb-4">
-                Get instant cash at best market rates with transparent XRF
-                testing
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300 font-light">
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-600 dark:text-amber-400">✓</span>
-                  Live market rates
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-600 dark:text-amber-400">✓</span>
-                  Instant payment
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Service 2 */}
-          <div className="bg-card dark:bg-card rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 hover:shadow-md hover:border-blue-300 dark:hover:border-amber-500/40 transition-all">
-            <div className="relative h-32">
-              <Image
-                src="/images/homepage/release-gold.avif"
-                alt="Gold bangles with financial documents"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <div className="text-5xl mb-4">🔓</div>
-              <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-amber-400">
-                Release Pledged Gold
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 font-light mb-4">
-                Close your gold loans from any bank with instant settlement
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300 font-light">
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-600 dark:text-amber-400">✓</span>
-                  All banks accepted
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-600 dark:text-amber-400">✓</span>
-                  Quick clearance
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Service 3 */}
-          <div className="bg-card dark:bg-card rounded-xl overflow-hidden shadow-sm border border-blue-100/50 dark:border-amber-500/20 hover:shadow-md hover:border-blue-300 dark:hover:border-amber-500/40 transition-all">
-            <div className="relative h-32">
-              <Image
-                src="/images/homepage/van.avif"
-                alt="Vehicle ready for doorstep gold pickup"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <div className="text-5xl mb-4">🚗</div>
-              <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-amber-400">
-                Vehicle Dispatcher
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 font-light mb-4">
-                Safe doorstep pickup service with insured transportation
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300 font-light">
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-600 dark:text-amber-400">✓</span>
-                  Doorstep service
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-600 dark:text-amber-400">✓</span>
-                  Verified staff
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+          <ServiceCard
+            image="/images/homepage/sell-gold.avif"
+            imageAlt="Gold ring close-up"
+            icon={"💰"}
+            title="Sell Gold"
+            description="Get instant cash at best market rates with transparent XRF testing"
+            benefits={["Live market rates", "Instant payment"]}
+          />
+          <ServiceCard
+            image="/images/homepage/release-gold.avif"
+            imageAlt="Gold bangles with financial documents"
+            icon={"🔓"}
+            title="Release Pledged Gold"
+            description="Close your gold loans from any bank with instant settlement"
+            benefits={["All banks accepted", "Quick clearance"]}
+          />
+          <ServiceCard
+            image="/images/homepage/van.avif"
+            imageAlt="Vehicle ready for doorstep gold pickup"
+            icon={"🚗"}
+            title="Vehicle Dispatcher"
+            description="Safe doorstep pickup service with insured transportation"
+            benefits={["Doorstep service", "Verified staff"]}
+          />
         </div>
 
         {/* CTA */}

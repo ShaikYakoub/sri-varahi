@@ -44,9 +44,9 @@ export default function Home() {
 
             {/* Subtext */}
             <p className="text-xl md:text-2xl text-white/85 font-light max-w-3xl mx-auto">
-              Live gold prices, instant valuation, complete transparency.
-              Experience the legacy of CapsGold with XRF testing and immediate
-              bank transfers.
+              Live gold prices, instant valuation, and complete transparency.
+              Modern technology, honest service, and instant payment— trusted by
+              thousands across Andhra Pradesh.
             </p>
 
             {/* CTAs */}
@@ -80,21 +80,21 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 Our{" "}
                 <span className="text-blue-700 dark:text-amber-400">
-                  Heritage & Trust
+                  Promise & Values
                 </span>
               </h2>
               <p className="text-center text-gray-600 dark:text-gray-300 mt-2 font-light">
-                Over a century of excellence, transparency, and customer
-                satisfaction
+                Built on transparency, customer-first service, and a commitment
+                to fair value
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-amber-400 mb-2">
-                  120+
+                  3
                 </div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-gray-300 font-light">
-                  Years Heritage
+                  Branches in AP
                 </div>
               </div>
               <div className="text-center">

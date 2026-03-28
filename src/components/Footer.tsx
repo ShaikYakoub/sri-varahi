@@ -66,10 +66,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-12 h-12 bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
+                className="w-8 h-8 bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-4 h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -81,10 +81,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="w-12 h-12 bg-[#1877F2] hover:bg-[#0C63D4] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
+                className="w-8 h-8 bg-[#1877F2] hover:bg-[#0C63D4] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-4 h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -96,10 +96,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="w-12 h-12 bg-[#FF0000] hover:bg-[#CC0000] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
+                className="w-8 h-8 bg-[#FF0000] hover:bg-[#CC0000] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-4 h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -167,7 +167,7 @@ export default function Footer() {
                   📞
                 </span>
                 <a
-                  href="tel:+9162626 67272"
+                  href="tel:+916262667272"
                   className="hover:text-blue-600 dark:hover:text-amber-400 transition-colors"
                 >
                   +91 62626 67272
@@ -188,13 +188,18 @@ export default function Footer() {
                 <span className="text-blue-600 dark:text-amber-400 text-lg mt-0.5">
                   📍
                 </span>
-                <div className="text-xs text-gray-600 dark:text-gray-300">
+                <a
+                  href="https://maps.app.goo.gl/6JrcMYyRwvvjizUs9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-amber-400 no-underline"
+                >
                   1st floor, 8-3-33 Mydukur - Badvel Rd
                   <br />
                   Beside HDFC BANK, Badvel
                   <br />
                   Andhra Pradesh - 516233
-                </div>
+                </a>
               </li>
             </ul>
           </div>

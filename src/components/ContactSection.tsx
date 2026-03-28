@@ -39,7 +39,7 @@ export default function ContactSection() {
             </h3>
             <div className="space-y-2">
               <a
-                href="tel:62626 67272"
+                href="tel:+916262667272"
                 className="block text-blue-600 dark:text-amber-400 hover:underline font-semibold"
               >
                 +91 62626 67272
@@ -115,5 +115,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
-

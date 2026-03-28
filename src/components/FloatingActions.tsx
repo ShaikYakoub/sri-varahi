@@ -22,7 +22,7 @@ export default function FloatingActions() {
     <>
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/919477894778?text=Hi,%20I%20have%20a%20gold%20enquiry."
+        href="https://wa.me/916262667272?text=Hi,%20I%20have%20a%20gold%20enquiry."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -62,5 +62,3 @@ export default function FloatingActions() {
     </>
   );
 }
-
-
