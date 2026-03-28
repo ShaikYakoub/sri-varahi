@@ -34,7 +34,7 @@ export default function BranchLocator() {
                 .map((branch) => (
                   <ServiceCard
                     key={branch.id}
-                    image={undefined}
+                    image=""
                     imageAlt={branch.name}
                     icon={
                       <svg
