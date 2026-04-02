@@ -97,9 +97,8 @@ export default function Navbar() {
               alt="Sri Varahi Logo"
               width={48}
               height={48}
-              className="mr-2"
+              className="mr-2 max-h-12 w-auto h-auto"
               priority
-              style={{ width: "auto", height: "auto" }}
             />
             <span
               className="text-xl md:text-2xl font-extrabold bg-linear-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent select-none"
