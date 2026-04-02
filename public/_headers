@@ -1,0 +1,13 @@
+# Cache immutable static assets for 1 year
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images/fonts for 1 year
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Prevent caching of HTML files so updates are always fetched
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "build": "npm run generate:sitemap && next build --turbopack && next-image-export-optimizer",
     "start": "next start",
     "lint": "eslint"
   },
@@ -29,6 +30,7 @@
     "autoprefixer": "^10.4.27",
     "eslint": "^10",
     "eslint-config-next": "16.2.1",
+    "next-image-export-optimizer": "^1.20.1",
     "postcss": "^8.5.8",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",

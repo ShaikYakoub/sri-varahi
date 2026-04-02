@@ -19,7 +19,7 @@ export default function ReleaseGoldPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center justify-center py-8 md:py-12">
+        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center justify-center py-8 md:py-12 mt-[-8px]">
           <Image
             src="/images/release/hero.avif"
             alt="gold necklace placed on a jewellary box"
@@ -61,13 +61,6 @@ export default function ReleaseGoldPage() {
             </div>
           </div>
         </section>
-
-        <CalculatorSection
-          defaultTab="pledged"
-          tabs={[
-            { label: "Pledged Gold Release Calculator", value: "pledged" },
-          ]}
-        />
 
         {/* Split Section - Banks Supported */}
         <section className="py-12 bg-white dark:bg-black">

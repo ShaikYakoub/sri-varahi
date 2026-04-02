@@ -17,6 +17,10 @@
 /.next/
 /out/
 
+# next-image-export-optimizer generated artifacts
+/public/images/**/nextImageExportOptimizer/
+/public/images/next-image-export-optimizer-hashes.json
+
 # production
 /build
 

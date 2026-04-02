@@ -5,7 +5,7 @@ export default function OurAbout() {
   return (
     <div className="contents">
       {/* Heritage Section */}
-      <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center">
+      <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center mt-[-8px]">
         <Image
           src="/images/about/hero.avif"
           alt="sri varahi team at work in the store"

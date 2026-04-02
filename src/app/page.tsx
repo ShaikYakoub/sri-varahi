@@ -1,5 +1,3 @@
-// Enable ISR (Incremental Static Regeneration) for Cloudflare Pages
-export const revalidate = 60; // Revalidate every 60 seconds in production
 import Navbar from "@/components/Navbar";
 // import HeroSlider from "@/components/HeroSlider";
 import ServicesOverview from "@/components/ServicesOverview";
@@ -19,7 +17,7 @@ export default function Home() {
 
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center text-center px-6 py-8 md:py-12">
+        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center text-center px-6 py-8 md:py-12 mt-[-8px]">
           <Image
             src="/images/homepage/hero.avif"
             alt="gold being exchanged for cash at a Sri Varahi branch"
@@ -66,10 +64,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Hero Image Slider */}
-        {/* <HeroSlider /> */}
-
         {/* Stats Band */}
         <section className="no-top-radius no-bottom-radius bg-slate-50 dark:bg-black py-10 border-y border-blue-100/50 dark:border-amber-500/20">
           <div className="max-w-6xl mx-auto px-6">
@@ -124,7 +118,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <CalculatorSection />
 
         <ServicesOverview />
 

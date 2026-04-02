@@ -45,11 +45,11 @@ export default function Footer() {
                 href="https://www.instagram.com/srivarahigoldcompany?igsh=MmIwMDVpajJxa20x"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 bg-linear-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
+                className="w-8 h-8 bg-linear-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md"
                 aria-label="Instagram"
               >
                 <svg
-                  className="w-7 h-7"
+                  className="w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -64,7 +64,7 @@ export default function Footer() {
                 className="w-8 h-8 bg-[#1877F2] hover:bg-[#0C63D4] text-white rounded-full flex items-center justify-center hover:scale-110 transition-colors shadow-md"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -79,7 +79,7 @@ export default function Footer() {
                 className="w-8 h-8 bg-[#FF0000] hover:bg-[#CC0000] text-white rounded-full flex items-center justify-center hover:scale-110 transition-colors shadow-md"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >

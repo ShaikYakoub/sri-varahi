@@ -10,6 +10,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://valuegold.in"),
+  alternates: {
+    canonical: "https://valuegold.in",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   title:
     "Value Gold - Best Gold Buyers in Andhra Pradesh | Trusted & Transparent",
   description:
@@ -22,7 +29,7 @@ export const metadata: Metadata = {
       "Modern, transparent, and trusted. Instant payment. XRF testing.",
     url: "https://valuegold.in",
     siteName: "Value Gold",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/logo.avif" }],
     locale: "en_IN",
     type: "website",
   },
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
     title: "Value Gold - Best Gold Buyers in Andhra Pradesh",
     description:
       "Modern, transparent, and trusted. Instant payment. XRF testing.",
-    images: ["/og-image.jpg"],
+    images: ["/images/logo.avif"],
   },
 };
 

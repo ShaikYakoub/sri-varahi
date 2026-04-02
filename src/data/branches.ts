@@ -39,8 +39,8 @@ export const branches: Branch[] = [
     name: "Narasaraopet",
     address:
       "1 st floor , SRI VARAHI GOLD RECOVERY AND BUYERS, 7-2-60, Old police station Road , market center , opposite samba siva  furniture,varavakatta, Narasaraopet, Andhra Pradesh 522601",
-    mapUrl: "https://maps.app.goo.gl/your-narasaraopet-map-link",
-    embedUrl: "",
+    mapUrl: "https://maps.app.goo.gl/your-markapur-map-link",
+    embedUrl: "15.736237534425939,79.26712507842832",
     phone: "+91 62626 67272",
   },
 ];

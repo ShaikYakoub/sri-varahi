@@ -13,7 +13,7 @@ export default function BranchesPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center justify-center py-8 md:py-12">
+        <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen flex items-center justify-center py-8 md:py-12 mt-[-8px]">
           <Image
             src="/images/branches/hero.avif"
             alt=""
