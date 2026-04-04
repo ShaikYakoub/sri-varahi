@@ -9,33 +9,33 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://valuegold.in"),
+  metadataBase: new URL("https://srivarahigoldcompany.com"),
   alternates: {
-    canonical: "https://valuegold.in",
+    canonical: "https://srivarahigoldcompany.com",
   },
   robots: {
     index: true,
     follow: true,
   },
   title:
-    "Value Gold - Best Gold Buyers in Andhra Pradesh | Trusted & Transparent",
+    "Sri Varahi - Best Gold Buyers in Andhra Pradesh | Trusted & Transparent",
   description:
     "Sell your gold at the best rates with complete transparency. Modern technology, instant payment, XRF testing. 3 branches across Andhra Pradesh and more coming soon.",
   keywords:
-    "gold buyers, sell gold, gold rate today, best gold buyers India, Value Gold, CapsGold",
+    "gold buyers, sell gold, gold rate today, best gold buyers India, Sri Varahi, CapsGold",
   openGraph: {
-    title: "Value Gold - Best Gold Buyers in Andhra Pradesh",
+    title: "Sri Varahi - Best Gold Buyers in Andhra Pradesh",
     description:
       "Modern, transparent, and trusted. Instant payment. XRF testing.",
-    url: "https://valuegold.in",
-    siteName: "Value Gold",
+    url: "https://srivarahigoldcompany.com",
+    siteName: "Sri Varahi",
     images: [{ url: "/images/logo.avif" }],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Value Gold - Best Gold Buyers in Andhra Pradesh",
+    title: "Sri Varahi - Best Gold Buyers in Andhra Pradesh",
     description:
       "Modern, transparent, and trusted. Instant payment. XRF testing.",
     images: ["/images/logo.avif"],

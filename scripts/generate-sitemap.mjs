@@ -4,7 +4,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const APP_DIR = path.join(ROOT, "src", "app");
 const OUTPUT_FILE = path.join(ROOT, "public", "sitemap.xml");
-const BASE_URL = (process.env.SITE_URL || "https://valuegold.in").replace(
+const BASE_URL = (process.env.SITE_URL || "https://srivarahigoldcompany.com").replace(
   /\/$/,
   "",
 );

@@ -22,7 +22,7 @@ const slides = [
   {
     id: 4,
     imageSrc: "/images/slider-gold-scale.webp",
-    alt: "Value Gold branch interior and service counter",
+    alt: "Sri Varahi branch interior and service counter",
   },
   {
     id: 5,

@@ -2,37 +2,37 @@ export default function ComparisonTable() {
   const comparisons = [
     {
       feature: "Gold Rate",
-      valueGold: "Live market-linked",
+      sriVarahi: "Live market-linked",
       others: "Lower / Fixed rates",
     },
     {
       feature: "Testing Method",
-      valueGold: "XRF Technology",
+      sriVarahi: "XRF Technology",
       others: "Manual methods",
     },
     {
       feature: "Deductions",
-      valueGold: "No hidden charges",
+      sriVarahi: "No hidden charges",
       others: "Heavy deductions",
     },
     {
       feature: "Minimum Quantity",
-      valueGold: "From 1 gram",
+      sriVarahi: "From 1 gram",
       others: "5–10 grams minimum",
     },
     {
       feature: "Payment Speed",
-      valueGold: "Instant bank transfer",
+      sriVarahi: "Instant bank transfer",
       others: "Delays / Cash only",
     },
     {
       feature: "Transparency",
-      valueGold: "100% visible process",
+      sriVarahi: "100% visible process",
       others: "Opaque procedures",
     },
     {
       feature: "Trust",
-      valueGold: "Licensed & transparent",
+      sriVarahi: "Licensed & transparent",
       others: "Unlicensed or less transparent",
     },
   ];
@@ -86,7 +86,7 @@ export default function ComparisonTable() {
                         <span className="text-blue-600 dark:text-amber-400 font-bold">
                           ✓
                         </span>
-                        {row.valueGold}
+                        {row.sriVarahi}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-red-600 dark:text-red-400">
